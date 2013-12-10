@@ -12,9 +12,6 @@ This repository is intended to provide Windows users with instructions to succes
 at the time of its creation but hopefully also in the future, when common solutions become outdated once
 again.
 
-The repository is also intended to become obsolete. After all, running Jekyll on Windows _should_ be just as
-easy as it is right now on other platforms. Here's hoping...
-
 A few notes before we get started
 ---------------------------------
 
@@ -125,11 +122,11 @@ install Python, setup_tools and pip.
 Before you can use pip from the command line to install Pygments, you need to add your Python environment to your
 PATH environment variables.
 
-1. Add `C:\path-to-your-python-installtion\Scripts;` to the _beginning_ of your **user** PATH variable. The semicolon is
+1. Add `C:\path-to-your-python-installation\Scripts;` to the _beginning_ of your **user** PATH variable. The semicolon is
    important! Without it, you'll mess up your PATH. If you used all the default settings, the string to add should
    be `C:\Python27\Scripts;`. Of course, you can also put the semicolon before the new path and add it to the _end_
    of your **user** PATH variable: `;C:\Python27\Scripts`
-2. Add `C:\path-to-your-python-installtion\;` to the _beginning_ of your **system** PATH variable. The semicolon is
+2. Add `C:\path-to-your-python-installation\;` to the _beginning_ of your **system** PATH variable. The semicolon is
    important! Without it, you'll mess up your PATH. If you used all the default settings, the string to add should
    be `C:\Python27\;`. Of course, you can also put the semicolon before the new path and add it to the _end_
    of your **system** PATH variable: `;C:\Python27\`
@@ -168,5 +165,5 @@ Jekyll command of your choice.
     cd "C:\my-site\"
     jekyll serve
 
-If you don't change the encoding, Jekyll will most certainly fail upon trying to build your site because of special
-characters it doesn't understand.
+If you don't change the encoding, Jekyll will likely fail to build your site because of special
+characters it doesn't understand. You need to do this every time you open a new command prompt before running Jekyll.
