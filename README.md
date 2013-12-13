@@ -139,20 +139,33 @@ Open a new command line window and run the following command:
 
 ## Install working version of Ruby part of Pygments ##
 
-Pygments.rb currently has a bug that causes Jekyll to fail when trying to compile sites that use Pygments. As s
-workaround, you can install an older version of the Pygments gem that doesn't have this problem.
+Pygments.rb recently fixed a bug that caused Jekyll to fail when trying to compile sites that use Pygments. In order to use Jekyll with projects that use Pygments for code highlighting, make sure you have a working version of Pygments installed. Versions known to work include `0.5.0` (recommended) and `0.5.4` but not those in between.
 
 1. Find out which version of Pygments you have installed.
-  * Run `gem list` and look for pygments in the output. There should be a version number like `0.5.2` listed next
-    to it.
-  * If you already have version 0.5.0 (and only that version) installed, you're already good to go.
-2. Uninstall the broken version of Pygments. Confirm that you want to break Jekyll's dependency (temporarily).
+  * Run `gem list` and look for `pygments.rb` in the output.
+  * You can find the version you have installed next to the name in the list.
 
-        gem uninstall pygments.rb --version "=your.installed.version"
-        (e.g. gem uninstall pygments.rb --version "=0.5.2")
+            ...
+            pygments.rb (0.5.?)
+            ...
+
+  * If your installed version is `0.5.0` or `0.5.4`, you're already good to go.
+  * **Note:** Using version `0.5.4`, you might receive warnings when you run Jekyll but your site should be successfully generated.
+
+            ...
+                Generating... C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/posix-spawn-0.3.8/lib/posix/spawn.rb:162: warning: cannot close fd before spawn
+                              done.
+              Server address: http://0.0.0.0:9001
+            Server running... press ctrl-c to stop.
+            ...
+
+2. If necessary (see above), uninstall any broken version of Pygments. Confirm that you want to break Jekyll's dependency (temporarily).
+
+        gem uninstall pygments.rb --version "=0.5.2"
         ...
         Continue with Uninstall? [yN] y
-3. Install the old, working version of Pygments.
+
+3. Install a working version of Pygments.
 
         gem install pygments.rb --version "=0.5.0"
 
