@@ -186,3 +186,18 @@ You can alternatively add the following setting to your `_config.yml` file, if t
     encoding: UTF-8
 
 **Note:** This will only change the encoding for one site. You'll need to continue to use the `chcp 65001` command for other sites (unless you add the setting to those, too).
+
+### Let Jekyll watch ###
+
+If you want to use Jekyll's auto-regeneration feature (`jekyll serve --watch` / `jekyll serve -w`), you need to have the Ruby gem *wdm* installed.
+
+You can:
+
+* Check the operating system and install the gem only if necessary (on Windows), if your site has a Gemfile. Add this to the Gemfile:
+
+        require 'rbconfig'
+        gem 'wdm', '~> 0.1.0' if RbConfig::CONFIG['target_os'] =~ /mswin|mingw/i
+
+* Install the gem manually, if your site doesn't have a Gemfile. Run this command:
+
+        gem install wdm
