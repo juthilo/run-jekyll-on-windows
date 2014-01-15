@@ -180,3 +180,9 @@ Jekyll command of your choice.
 
 If you don't change the encoding, Jekyll will likely fail to build your site because of special
 characters it doesn't understand. You need to do this every time you open a new command prompt before running Jekyll.
+
+You can alternatively add the following setting to your `_config.yml` file, if that is an option:
+
+    encoding: UTF-8
+
+**Note:** This will only change the encoding for one site. You'll need to continue to use the `chcp 65001` command for other sites (unless you add the setting to those, too).
