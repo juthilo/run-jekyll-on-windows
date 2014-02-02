@@ -73,11 +73,11 @@ Some of Jekyll's dependencies need to be built as "native extensions". To do tha
 
 ## Install the Jekyll gem ##
 
-This is it.
+Jekyll v1.4.3 was released on January 13, 2014. Unfortunately, this version is not compatible with Windows environments (see [jekyll/jekyll#1948](https://github.com/jekyll/jekyll/issues/1948 for more information)). Until this problem is fixed, you need to make sure to install the latest known working version, v1.4.2:
 
-1. Install Jekyll from the command line.
+1. Install Jekyll v1.4.2 from the command line.
 
-        gem install jekyll
+        gem install jekyll --version "=1.4.2"
 
 2. Watch and enjoy.
 
