@@ -87,7 +87,7 @@ you can skip to the [Run Jekyll](#run-jekyll) section. Otherwise, read on to get
 
 ## Install Python Environment ##
 
-If you want to use Pygments, which is a default Jekyll dependency for syntax highlighting on Windows, you need to
+If you want to use Pygments, which is a default Jekyll dependency, for syntax highlighting on Windows, you need to
 install Python, setup_tools and pip.
 
 ### Install Python ###
