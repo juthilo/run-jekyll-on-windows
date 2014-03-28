@@ -1,16 +1,11 @@
 How to Run Jekyll on Windows
 ============================
 
-Sadly, getting [Jekyll](http://jekyllrb.com) to run on Windows is not as easy as it is on Mac OS X or Linux,
-which is also why it is not officially supported or documented.
+Sadly, getting [Jekyll](http://jekyllrb.com) to run on Windows is not as easy as it is on Mac OS X or Linux, which is also why it is not officially supported or documented.
 
-Running Jekyll on Windows is not impossible though. In fact, there are a lot of tutorials out there, some
-more, some less helpful. Most of these are written as blog posts which is often why they become outdated and
-inaccurate over time.
+Running Jekyll on Windows is not impossible though. In fact, there are a lot of tutorials out there, some more, some less helpful. Most of these are written as blog posts which is often why they become outdated and inaccurate over time.
 
-This repository is intended to provide Windows users with instructions to successfully run Jekyll - not just
-at the time of its creation but hopefully also in the future, when common solutions become outdated once
-again.
+This repository is intended to provide Windows users with instructions to successfully run Jekyll - not just at the time of its creation but hopefully also in the future, when common solutions become outdated once again.
 
 A few notes before we get started
 ---------------------------------
@@ -73,14 +68,15 @@ Some of Jekyll's dependencies need to be built as "native extensions". To do tha
 
 ## Install the Jekyll gem ##
 
-Jekyll v1.4.3 was released on January 13, 2014. Unfortunately, this version is not compatible with Windows environments (see [jekyll/jekyll#1948](https://github.com/jekyll/jekyll/issues/1948) for more information). Until this problem is fixed, you need to make sure to install the latest known working version, v1.4.2:
+The latest version of Jekyll at the time of writing is **v1.5.1, which is compatible with Windows environments**. Do not attempt to install Jekyll **v1.4.3, which is known to be incompatible with Windows.** (See [jekyll/jekyll#1948](https://github.com/jekyll/jekyll/issues/1948) for more information.)
 
-1. Install Jekyll v1.4.2 from the command line.
+1. Install the latest version of Jekyll from the command line.
 
-        gem install jekyll --version "=1.4.2"
+        gem install jekyll
 
 2. Watch and enjoy.
 
+Future versions of Jekyll might once again be incompatible with Windows. Check back here when a new version is released to see if it remains compatible.
 
 * * *
 
@@ -91,7 +87,7 @@ you can skip to the [Run Jekyll](#run-jekyll) section. Otherwise, read on to get
 
 ## Install Python Environment ##
 
-If you want to use Pygments, which is a default Jekyll dependency, for syntax highlighting on Windows, you need to
+If you want to use Pygments, which is a default Jekyll dependency for syntax highlighting on Windows, you need to
 install Python, setup_tools and pip.
 
 ### Install Python ###
@@ -171,15 +167,13 @@ Pygments.rb recently fixed a bug that caused Jekyll to fail when trying to compi
 
 ## Run Jekyll ##
 
-To run Jekyll, change the command line's encoding to UTF-8, navigate to your site source folder and run the
-Jekyll command of your choice.
+Depending on your individual site, problems due to incompatible character encodings might arise. To avoid those, change your command line's encoding to UTF-8 before navigating to your site source folder and running the Jekyll command of your choice.
 
     chcp 65001
     cd "C:\my-site\"
     jekyll serve
 
-If you don't change the encoding, Jekyll will likely fail to build your site because of special
-characters it doesn't understand. You need to do this every time you open a new command prompt before running Jekyll.
+You need to do this every time you open a new command prompt before running Jekyll.
 
 You can alternatively add the following setting to your `_config.yml` file, if that is an option:
 
