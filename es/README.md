@@ -21,7 +21,7 @@ Abajo encontrarás las instrucciones para instalar...
 * ... El kit de desarrollo (DevKit), para ser capaces de desarrollar extensiones nativas. [saltar a sección](#instalación-del-devkit-de-ruby)
 * ... La gema de Jekyll. [saltar a sección](#instalación-de-la-gema-de-jekyll)
 * ... Python, para ser capaces de utilizar Pygments, un resaltador de sintáxis, con Jekyll. [saltar a sección](#instalar-el-entorno-de-python)
-* ... setup\_tools  y pip, para instalar la parte de Pygments correspondiente a Python. [saltar a sección](#instalación-de-setup_tools)
+* ... setuptools y pip, para instalar la parte de Pygments correspondiente a Python. [saltar a sección](#instalación-de-setuptools)
 * ... Una versión funcional de la gema de Pygments. [saltar a sección](#instalación-de-una-versión-funcional-de-la-parte-ruby-de-pygments)
 
 Finalmente, serás capaz de [Ejecutar Jekyll](#ejecutar-jekyll) en windows usando un último truco.
@@ -83,7 +83,7 @@ Ahora tienes instalado Jekyll en tu instalación de Windows. Si estás seguro de
 
 ## Instalar el entorno de Python ##
 
-Si quieres utilizar Pygments, la cual es una dependencia de Jekyll para el resaltado de sintaxis en Windows, necesitas instalar Python, setup_tools y pip.
+Si quieres utilizar Pygments, la cual es una dependencia de Jekyll para el resaltado de sintaxis en Windows, necesitas instalar Python, setuptools y pip.
 
 ### Instalación de Python ###
 
@@ -92,9 +92,9 @@ Si quieres utilizar Pygments, la cual es una dependencia de Jekyll para el resal
   * Otra vez, asegurate de descargar el paquete destinado a tu sistema.
 2. Ejecuta el instalador. Todos los valores por defecto deberían estar bien.
 
-### Instalación de setup_tools ###
+### Instalación de setuptools ###
 
-1. Descargar el instalador de setup_tools que coincida con tu sistema y tu instalación de python desde [acá](http://www.lfd.uci.edu/~gohlke/pythonlibs/#setuptools).
+1. Descargar el instalador de setuptools que coincida con tu sistema y tu instalación de python desde [acá](http://www.lfd.uci.edu/~gohlke/pythonlibs/#setuptools).
 2. Ejecuta el instalador.
   * Si usaste los valores por defecto al instalar Python, puedes hacer lo mismo aquí. De otra forma, ingresa el path correcto.
 

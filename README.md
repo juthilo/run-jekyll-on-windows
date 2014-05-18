@@ -25,7 +25,7 @@ Below, you'll find instructions to install...
 * ... the Ruby Dev Kit to be able to build native extensions. [jump to section](#install-the-ruby-devkit)
 * ... the Jekyll gem. [jump to section](#install-the-jekyll-gem)
 * ... Python to be able to use Pygments, a common syntax highlighter, with Jekyll. [jump to section](#install-python-environment)
-* ... Python setup\_tools and pip to install the Python part of Pygments. [jump to section](#install-setup\_tools)
+* ... Python setuptools and pip to install the Python part of Pygments. [jump to section](#install-setup\_tools)
 * ... the working version of the Pygments gem. [jump to section](#install-python-part-of-pygments)
 
 Finally, you'll be able to [Run Jekyll](#run-jekyll) on Windows using one last trick.
@@ -88,7 +88,7 @@ you can skip to the [Run Jekyll](#run-jekyll) section. Otherwise, read on to get
 ## Install Python Environment ##
 
 If you want to use Pygments, which is a default Jekyll dependency, for syntax highlighting on Windows, you need to
-install Python, setup_tools and pip.
+install Python, setuptools and pip.
 
 ### Install Python ###
 
@@ -97,9 +97,9 @@ install Python, setup_tools and pip.
   * Again, make sure to download the package intended for your system.
 2. Execute the installer. All default values should be fine.
 
-### Install setup_tools ###
+### Install setuptools ###
 
-1. Download the setup_tools installer that matches your system and your Python installation from
+1. Download the setuptools installer that matches your system and your Python installation from
    [here](http://www.lfd.uci.edu/~gohlke/pythonlibs/#setuptools).
 2. Execute the installer.
   * If you used the default values when installing Python, you can do the same here. Otherwise, enter the correct
