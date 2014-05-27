@@ -7,13 +7,11 @@
 
 本教程打算提供给Windows用户如何成功运行Jekyll的完整的指导 -- 并且希望不仅能给出当前环境下的配置教程，而且在将来也能起指导作用。
 
-开始前的一些Note
+开始前的一些说明
 ---------------------------------
 
-* Except where otherwise noted, content in this repository is licensed under a Creative Commons Attribution
-3.0 license. You can find a copy of the license in the [LICENSE file](LICENSE).
-* Liability claims regarding damage caused by the use of any information provided, including any kind of
-incorrect or sparse information, will be rejected. **USE THE INFORMATION PROVIDED ON THIS PAGE AT YOUR OWN RISK**.
+* 除非特殊说明, 这个repository中内容使用Creative Commons Attribution 3.0 license协议. 你可以在这里找到一份协议拷贝 [LICENSE file](LICENSE).
+* 免责申明，使用本页面信息，包括可能错误的或者不完整的信息，导致的错误，风险自担**本页面信息造成的任何伤害风险自担**.
 
 * * *
 
@@ -21,12 +19,12 @@ incorrect or sparse information, will be rejected. **USE THE INFORMATION PROVIDE
 
 依据以下步骤安装，详细安装步骤在后文...
 
-* ... Ruby. [jump to section](#install-ruby)
-* ... the Ruby Dev Kit to be able to build native extensions. [jump to section](#install-the-ruby-devkit)
-* ... the Jekyll gem. [jump to section](#install-the-jekyll-gem)
-* ... Python to be able to use Pygments, a common syntax highlighter, with Jekyll. [jump to section](#install-python-environment)
-* ... Python setuptools and pip to install the Python part of Pygments. [jump to section](#install-setup\_tools)
-* ... the working version of the Pygments gem. [jump to section](#install-python-part-of-pygments)
+* ... Ruby. [jump to section](#安装-ruby)
+* ... the Ruby Dev Kit to be able to build native extensions. [jump to section](#安装-ruby-devkit)
+* ... the Jekyll gem. [jump to section](#安装-jekyll-gem)
+* ... Python to be able to use Pygments, a common syntax highlighter, with Jekyll. [jump to section](#安装python环境)
+* ... Python setuptools and pip to install the Python part of Pygments. [jump to section](#安装-setup\_tools)
+* ... the working version of the Pygments gem. [jump to section](#安装-python-part-of-pygments)
 
 最后, 就能使用文中最后提到的方法 [Run Jekyll](#run-jekyll) .
 
@@ -35,15 +33,15 @@ incorrect or sparse information, will be rejected. **USE THE INFORMATION PROVIDE
 Jekyll是由Ruby写成的. 我们首先要安装它.
 
 1. 下载 RubyInstaller from [rubyinstaller.org](http://rubyinstaller.org/downloads/).
-  * Version 2.0.0 should work fine.
-  * Make sure to download the right package depending on your system's architecture: x86 / x64 注意系统是32位或者64位
+  * 2.0.0版本可以运行.
+  * 注意系统是32位或者64位
 2. 运行安装包，按照指示下一步下一步
   * 唯一需要注意的是勾选 "Add Ruby executables to your PATH"
-3. After you click on Install, you're all set with Ruby!
+3. 在点击“Install”之后, Ruby一切都安装好了!
 
 ## 安装 Ruby DevKit ##
 
-Some of Jekyll's dependencies need to be built as "native extensions". To do that, you'll need the Ruby DevKit.
+有一些Jekyll的dependencies需要编译为"native extensions". 为了实现那样，你需要安装Ruby DevKit.
 
 1. 下载安装包 from [rubyinstaller.org](http://rubyinstaller.org/downloads/).
   * The DevKit's version number and target architecture (32/64 bit) need to match your Ruby installation.
@@ -83,45 +81,35 @@ Some of Jekyll's dependencies need to be built as "native extensions". To do tha
 
 * * *
 
-## 安装 Python 环境 ##
+## 安装Python环境 ##
 
 如果你想要使用Jekyll默认依赖 Pygments, Windows上语法高亮, 你需要安装 Python, setuptools and pip.
 
 ### 安装 Python ###
 
-1. Download the Python installer from [python.org](http://www.python.org/download/).
+1. 下载 Python 安装包 [python.org](http://www.python.org/download/).
   * Python 3 不兼容 Jekyll. 使用 Python 2.7.5.
   * 再一次,下载符合操作系统版本的安装包
 2. 执行安装. 按照默认操作即可.
 
-### 安装 setuptools ###
+### 安装 setup\_tools ###
 
-1. Download the setuptools installer that matches your system and your Python installation from
-   [here](http://www.lfd.uci.edu/~gohlke/pythonlibs/#setuptools).
-2. Execute the installer.
-  * If you used the default values when installing Python, you can do the same here. Otherwise, enter the correct
-    path.
+1. 下载符合系统版本和Python版本的 setuptools 安装包 from [here](http://www.lfd.uci.edu/~gohlke/pythonlibs/#setuptools).
+2. 执行安装包.
+  * 如果你在安装Python时使用默认安装, 这里同样默认. 否则你需要键入正确的路径.
 
 ### 安装 pip ###
 
-1. Download the pip installer that matches your system and your Python installation from
-   [here](http://www.lfd.uci.edu/~gohlke/pythonlibs/#pip).
-2. Execute the installer.
-  * If you used the default values when installing Python, you can do the same here. Otherwise, enter the correct
-    path.
+1. 下载符合系统版本和Python版本的 pip 安装包 from [here](http://www.lfd.uci.edu/~gohlke/pythonlibs/#pip).
+2. 执行安装包.
+  * 如果你在安装Python时使用默认安装, 这里同样默认. 否则你需要键入正确的路径.
 
 ### 将 pip and Python 添加到 PATH 环境变量 ###
 
 在你能够在命令行使用 pip 来安装 Pygments 之前, 你需要将 Python 添加到 PATH 环境变量.
 
-1. Add `C:\path-to-your-python-installation\Scripts;` to the _beginning_ of your **user** PATH variable. The semicolon is
-   important! Without it, you'll mess up your PATH. If you used all the default settings, the string to add should
-   be `C:\Python27\Scripts;`. Of course, you can also put the semicolon before the new path and add it to the _end_
-   of your **user** PATH variable: `;C:\Python27\Scripts`
-2. Add `C:\path-to-your-python-installation\;` to the _beginning_ of your **system** PATH variable. The semicolon is
-   important! Without it, you'll mess up your PATH. If you used all the default settings, the string to add should
-   be `C:\Python27\;`. Of course, you can also put the semicolon before the new path and add it to the _end_
-   of your **system** PATH variable: `;C:\Python27\`
+1. 将 `C:\path-to-your-python-installation\Scripts;` 添加到 **user** PATH 变量的开始. 分号很重要! 如果没有分号,你会把Path搞混乱. 如果你上述步骤都是默认, 需要添加的路径应该是 `C:\Python27\Scripts;`. 当然, 你也可以将分号放到新加路径的前面并把添加的路径放到 **user** PATH 变量的后面: `;C:\Python27\Scripts`
+2. 将 `C:\path-to-your-python-installation\;` 添加到 **system** PATH 变量的开始. 分号很重要! 如果没有分号,你会把Path搞混乱. 如果你上述步骤都是默认, 需要添加的路径应该是 `C:\Python27\;`. 当然, 你也可以将分号放到新加路径的前面并把添加的路径放到 **system** PATH 变量的后面: `;C:\Python27\`
 
 ## 安装 Python part of Pygments ##
 
@@ -131,18 +119,18 @@ Some of Jekyll's dependencies need to be built as "native extensions". To do tha
 
 ## 安装 working version of Ruby part of Pygments ##
 
-Pygments.rb recently fixed a bug that caused Jekyll to fail when trying to compile sites that use Pygments. In order to use Jekyll with projects that use Pygments for code highlighting, make sure you have a working version of Pygments installed. Versions known to work include `0.5.0` (recommended) and `0.5.4` but not those in between.
+Pygments.rb 最近修复了一个bug, 这个bug会导致 Jekyll 在使用Pygments编译生成站点的时候发生错误. 为了在Jekyll中使用Pygments 达到高亮效果, 确保你有一个能工作的Pygments. 可工作的版本包括 `0.5.0` (推荐) 和 `0.5.4` 但是不包括其中的.
 
 1. 查看安装的 Pygments 版本.
-  * Run `gem list` and look for `pygments.rb` in the output.
-  * You can find the version you have installed next to the name in the list.
+  * 运行 `gem list` 并查看输出中的 `pygments.rb`.
+  * 你可以在输出列表中查看你所安装的版本.
 
             ...
             pygments.rb (0.5.?)
             ...
 
   * 如果你的安装版本是 `0.5.0` or `0.5.4`, 你可以继续.
-  * **Note:** Using version `0.5.4`, you might receive warnings when you run Jekyll but your site should be successfully generated.
+  * **说明:** 使用 `0.5.4` 版本, 当你运行Jekyll的时候，你会收到警告，但是你的站点应该能够生成成功.
 
             ...
                 Generating... C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/posix-spawn-0.3.8/lib/posix/spawn.rb:162: warning: cannot close fd before spawn
@@ -151,13 +139,13 @@ Pygments.rb recently fixed a bug that caused Jekyll to fail when trying to compi
             Server running... press ctrl-c to stop.
             ...
 
-2. If necessary (see above), uninstall any broken version of Pygments. Confirm that you want to break Jekyll's dependency (temporarily).
+2. 如果需要 (see above), 卸载任何有问题的 Pygments. Confirm that you want to break Jekyll's dependency (temporarily).
 
         gem uninstall pygments.rb --version "=0.5.2"
         ...
         Continue with Uninstall? [yN] y
 
-3. Install a working version of Pygments.
+3. 安装可工作的 Pygments.
 
         gem install pygments.rb --version "=0.5.0"
 
@@ -169,7 +157,7 @@ Pygments.rb recently fixed a bug that caused Jekyll to fail when trying to compi
     cd "C:\my-site\"
     jekyll serve
 
-You need to do this every time you open a new command prompt before running Jekyll.
+在运行Jekyll之前,你都需要运行一下以上代码.
 
 你可以将如下设置添加到 `_config.yml` 文件, 如果有这个选项:
 
