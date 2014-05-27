@@ -97,7 +97,7 @@ install Python, setuptools and pip.
   * Again, make sure to download the package intended for your system.
 2. Execute the installer. All default values should be fine.
 
-### Install setuptools ###
+### Install setup\_tools ###
 
 1. Download the setuptools installer that matches your system and your Python installation from
    [here](http://www.lfd.uci.edu/~gohlke/pythonlibs/#setuptools).
