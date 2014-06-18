@@ -64,22 +64,20 @@ Algumas das dependências do Jekyll precisam ser construídas como "extensões n
 
             ruby dk.rb install
 
-## Install the Jekyll gem ##
+## Instale o  gem do Jekyll ##
+A última versão do Jekyll no momento da escrita é ** v2.0.1, que é compatível com ambientes Windows. ** Não tente instalar Jekyll ** v1.4.3, que é conhecido por ser incompatível com o Windows. **(Ver [jekyll/jekyll#1948](https://github.com/jekyll/jekyll/issues/1948) para mais informações.)
 
-The latest version of Jekyll at the time of writing is **v1.5.1, which is compatible with Windows environments**. Do not attempt to install Jekyll **v1.4.3, which is known to be incompatible with Windows.** (See [jekyll/jekyll#1948](https://github.com/jekyll/jekyll/issues/1948) for more information.)
-
-1. Install the latest version of Jekyll from the command line.
+1. Instale a versão actualizada do Jekyll pela linha de comandos.
 
         gem install jekyll
 
-2. Watch and enjoy.
+2. Espere.
 
-Future versions of Jekyll might once again be incompatible with Windows. Check back here when a new version is released to see if it remains compatible.
+Futuras versões do Jekyll podem voltar a ser incompatíveis com o Windows. Volte aqui quando uma nova versão é lançada para ver se ele continua a ser compatível.
 
 * * *
-
-You now have Jekyll installed on your Windows computer. If you are sure you'll never need to use Pygments,
-you can skip to the [Run Jekyll](#run-jekyll) section. Otherwise, read on to get Pygments running as well.
+Você tem agora Jekyll instalado no seu computador com Windows. Se você tem certeza de que nunca mais vai precisar usar Pygments, 
+você pode pular para a seção [Rodar Jekyll](#run-jekyll). Caso contrário, continue a ler.
 
 * * *
 
