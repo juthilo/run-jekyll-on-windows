@@ -29,39 +29,38 @@ Abaixo, você encontrará instruções para instalação...
 
 Finalmente, serás capaz de [Rodar o Jekyll](#run-jekyll) no Windows usando um último truque.
 
-## Install Ruby ##
+## Instalar Ruby ##
+Jekyll foi escrito na linguagem Ruby, portanto Vamos precisar instalá-lo em primeiro lugar para começar.
 
-Ruby is the language Jekyll is written in. We'll need to install it first to get started.
+1. Baixar o RubyInstaller no link [rubyinstaller.org](http://rubyinstaller.org/downloads/).
+  * Versão 2.0.0 deve funcionar bem.
+  * Certifique-se de baixar o pacote certo dependendo da arquitetura do seu sistema: x86 / x64
+2. Execute o programa de instalação, que irá guiá-lo através da instalação. 
+   * A única personalização que você precisa fazer para os nossos propósitos é verificar a caixa "Add executáveis ​​do Ruby para o seu
+    PATH "na última tela antes da instalação real.
+3.Após clicar em "Install", está tudo pronto com Ruby!
 
-1. Download a RubyInstaller from [rubyinstaller.org](http://rubyinstaller.org/downloads/).
-  * Version 2.0.0 should work fine.
-  * Make sure to download the right package depending on your system's architecture: x86 / x64
-2. Execute the installer which will guide you through the installation.
-  * The only customization you need to make for our purposes is to check the box "Add Ruby executables to your
-    PATH" on the last screen before the actual installation.
-3. After you click on Install, you're all set with Ruby!
+## Instalar o DevKit do Ruby ##
 
-## Install the Ruby DevKit ##
+Algumas das dependências do Jekyll precisam ser construídas como "extensões nativas". Para fazer isso, você vai precisar do DevKit do Ruby.
 
-Some of Jekyll's dependencies need to be built as "native extensions". To do that, you'll need the Ruby DevKit.
-
-1. Download the package from [rubyinstaller.org](http://rubyinstaller.org/downloads/).
-  * The DevKit's version number and target architecture (32/64 bit) need to match your Ruby installation.
-2. What you have now is a self-extracting archive.
-  * Execute the file.
-  * Change the extraction destination to something like `C:\rubydevkit\`.
-  * Extract the archive.
-  * **Note**: For some reason, the extraction might fail if you have lots of other programs running.
-3. Initialize the DevKit and bind it to your Ruby installation (via your preferred command line tool).
-  * Navigate to the folder you extracted the DevKit into.
+1. Baixe o pacote de [rubyinstaller.org](http://rubyinstaller.org/downloads/).
+  * Número da versão do DevKit e arquitetura alvo (32/64 bit) precisa corresponder à sua instalação Ruby.
+2. O que você tem agora é um arquivo auto-extraível.
+  * Execute o ficheiro.
+  * Altere o destino de extração para algo como `C:\rubydevkit\`.
+  * Extraia o arquivo.
+  * **Nota**: Por alguma razão, a extração pode falhar se você tiver lotes de outros programas em execução. 
+3. Inicializar o DevKit e vinculá-lo a sua instalação do Ruby (via sua ferramenta de linha de comando de preferência). 
+   * Navegue até a pasta que você extraiu o DevKit em.
 
             cd "C:\rubydevkit\"
 
-  * Auto-detect Ruby installations and add them to a configuration file.
+  * Auto-detectar instalações do Ruby e adicioná-los para um arquivo de configuração.
 
             ruby dk.rb init
 
-  * Install the DevKit.
+  * Instale o DevKit.
 
             ruby dk.rb install
 
