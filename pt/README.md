@@ -151,39 +151,41 @@ Pygments.rb recentemente resolveu um bug que causava a falha no Jekyll ao tentar
             Server running... press ctrl-c to stop.
             ...
 
-2. If necessary (see above), uninstall any broken version of Pygments. Confirm that you want to break Jekyll's dependency (temporarily).
+2. Se for necessário (veja acima), desinstalar qualquer versão quebrada do Pygments. Confirme se você quer quebrar a dependência de Jekyll (temporariamente).
 
         gem uninstall pygments.rb --version "=0.5.2"
         ...
         Continue with Uninstall? [yN] y
 
-3. Install a working version of Pygments.
+3. Instale versão funcional do Pygments.
 
         gem install pygments.rb --version "=0.5.0"
 
-## Run Jekyll ##
+## Rodar o Jekyll ##
 
 Depending on your individual site, problems due to incompatible character encodings might arise. To avoid those, change your command line's encoding to UTF-8 before navigating to your site source folder and running the Jekyll command of your choice.
+
+Dependendo do seu site individual, problemas devido à codificação de caracteres incompatíveis podem surgir. Para evitar esses problemas, mudar a codificação de sua linha de comando para UTF-8 antes de navegar para a sua pasta de origem local e executar o comando Jekyll de sua escolha.
 
     chcp 65001
     cd "C:\my-site\"
     jekyll serve
 
-You need to do this every time you open a new command prompt before running Jekyll.
+Você precisa fazer isso toda vez que você abrir um novo prompt de comando antes de executar Jekyll.
 
-You can alternatively add the following setting to your `_config.yml` file, if that is an option:
+Você pode, alternativamente, adicionar a seguinte configuração para o seu ficheiro `_config.yml`, se isso for opcional:
 
     encoding: UTF-8
 
-**Note:** This will only change the encoding for one site. You'll need to continue to use the `chcp 65001` command for other sites (unless you add the setting to those, too).
+**Nota:** Isso só vai mudar a codificação em um site. Você vai precisar de continuar a usar o `chcp 65001` comando em outros sites (a menos que você adicionar a definição para aqueles, também).
 
-### Let Jekyll watch ###
+### Deixa o Jekyll observar ###
 
-If you want to use Jekyll's auto-regeneration feature (`jekyll serve --watch` / `jekyll serve -w`), you need to have the Ruby gem *wdm* installed.
+Se você quiser usar o recurso de auto-regeneração do Jekyll (`jekyll serve --watch` / `jekyll serve -w`), você precisa ter o Ruby gem *wdm* instalado.
 
-You can:
+Podes:
 
-* Check the operating system and install the gem only if necessary (on Windows), if your site has a Gemfile. Add this to the Gemfile:
+* Verificar o sistema operacional e instalar o gem somente se necessário (no Windows), se o seu site tem um Gemfile. Adicione isso ao Gemfile:
 
         require 'rbconfig'
         gem 'wdm', '~> 0.1.0' if RbConfig::CONFIG['target_os'] =~ /mswin|mingw/i
