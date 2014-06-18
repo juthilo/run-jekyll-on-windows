@@ -7,28 +7,27 @@ Correndo Jekyll no Windows não é impossível. Na verdade, há um monte de tuto
 
 Este repositório destina-se a fornecer aos usuários do Windows com instruções, como executar com êxito o Jekyll - e não apenas no momento de sua criação, mas espero que também no futuro, quando as soluções comuns tornarem-se obsoletas.
 
-A few notes before we get started
+Algumas notas antes de começarmos
 ---------------------------------
 
-* Except where otherwise noted, content in this repository is licensed under a Creative Commons Attribution
-3.0 license. You can find a copy of the license in the [LICENSE file](LICENSE).
-* Liability claims regarding damage caused by the use of any information provided, including any kind of
-incorrect or sparse information, will be rejected. **USE THE INFORMATION PROVIDED ON THIS PAGE AT YOUR OWN RISK**.
-
+* Exceto quando indicado, o conteúdo deste repositório está licenciado sob uma Creative Commons Attribution 
+Licença 3.0. Você pode encontrar uma cópia da licença no link [LICENSE file](LICENSE).
+* Quaisquer reclamações de responsabilidade relativas a danos causados ​​pelo uso de qualquer informação fornecida, incluindo qualquer tipo de 
+informações incorretas ou esparsa, será rejeitado. ** Use as informações fornecidas NESTA PÁGINA POR SUA CONTA E RISCO. **
 * * *
 
-## Overview ##
+## visão global ##
 
-Below, you'll find instructions to install...
+Abaixo, você encontrará instruções para instalação...
 
-* ... Ruby. [jump to section](#install-ruby)
-* ... the Ruby Dev Kit to be able to build native extensions. [jump to section](#install-the-ruby-devkit)
-* ... the Jekyll gem. [jump to section](#install-the-jekyll-gem)
-* ... Python to be able to use Pygments, a common syntax highlighter, with Jekyll. [jump to section](#install-python-environment)
-* ... Python setuptools and pip to install the Python part of Pygments. [jump to section](#install-setup\_tools)
-* ... the working version of the Pygments gem. [jump to section](#install-python-part-of-pygments)
+* ... Ruby. [ir para a seção](#install-ruby)
+* ... O Dev Kit do Ruby para ser capaz de construir extensões nativas. [ir para a seção](#install-the-ruby-devkit)
+* ... O gem do Jekyll. [ir para a seção](#install-the-jekyll-gem)
+* ... Python para ser capaz de usar Pygments, um marcador de sintaxe comuns, com Jekyll. [ir para a seção](#install-python-environment)
+* ... Setuptools do Python e pip para instalar a parte de Python Pygments. [ir para a seção](#install-setup\_tools)
+* ... a versão de funcional do Pygments gem. [ir para a seção](#install-python-part-of-pygments)
 
-Finally, you'll be able to [Run Jekyll](#run-jekyll) on Windows using one last trick.
+Finalmente, serás capaz de [Rodar o Jekyll](#run-jekyll) no Windows usando um último truque.
 
 ## Install Ruby ##
 
