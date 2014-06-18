@@ -81,33 +81,34 @@ você pode pular para a seção [Rodar Jekyll](#run-jekyll). Caso contrário, co
 
 * * *
 
-## Install Python Environment ##
+## Instale o Ambiente Python ##
 
 If you want to use Pygments, which is a default Jekyll dependency, for syntax highlighting on Windows, you need to
 install Python, setuptools and pip.
 
-### Install Python ###
+Se quiser usar Pygments, que é uma  dependência padrão Jekyll, para destacar a sintaxe no Windows, você precisa 
+instalar Python, setuptools e pip.
 
-1. Download the Python installer from [python.org](http://www.python.org/download/).
-  * Python 3 is currently known not to work with Jekyll. Use Python 2.7.5.
-  * Again, make sure to download the package intended for your system.
-2. Execute the installer. All default values should be fine.
+### instale Python ###
 
-### Install setuptools ###
+1. Baixe o instalador do Python [python.org](http://www.python.org/download/).
+  *Python 3 é conhecido atualmente e não trabalha com Jekyll. Use Python 2.7.5.
+  * Mais uma vez, certifique-se de baixar o pacote destinado para o seu sistema.
+2. Execute o instalador. Todos os valores padrão devem estar bem definidos.
 
-1. Download the setuptools installer that matches your system and your Python installation from
-   [here](http://www.lfd.uci.edu/~gohlke/pythonlibs/#setuptools).
+### Instale setuptools ###
+
+1. Baixe o instalador setuptools que corresponde ao seu sistema e sua instalação a partir do Python
+   [aqui](http://www.lfd.uci.edu/~gohlke/pythonlibs/#setuptools).
+2. Execute o instalador.
+  * Se você usou os valores padrão durante a instalação do Python, você pode fazer o mesmo aqui. Caso contrário, digite o caminho correto.
+
+### Instale pip ###
+
+1. Baixe o instalador pip que corresponde ao seu sistema e sua instalação a partir do Python
+   [aqui](http://www.lfd.uci.edu/~gohlke/pythonlibs/#pip).
 2. Execute the installer.
-  * If you used the default values when installing Python, you can do the same here. Otherwise, enter the correct
-    path.
-
-### Install pip ###
-
-1. Download the pip installer that matches your system and your Python installation from
-   [here](http://www.lfd.uci.edu/~gohlke/pythonlibs/#pip).
-2. Execute the installer.
-  * If you used the default values when installing Python, you can do the same here. Otherwise, enter the correct
-    path.
+  * Se você usou os valores padrão durante a instalação do Python, você pode fazer o mesmo aqui. Caso contrário, digite o caminho correto.
 
 ### Add pip and Python to your PATH environment variable ###
 
@@ -188,6 +189,6 @@ You can:
         require 'rbconfig'
         gem 'wdm', '~> 0.1.0' if RbConfig::CONFIG['target_os'] =~ /mswin|mingw/i
 
-* Install the gem manually, if your site doesn't have a Gemfile. Run this command:
+* Instale o gem manualmente, se o seu site não possui um Gemfile. Utilizar este comando:
 
         gem install wdm
