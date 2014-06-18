@@ -107,43 +107,42 @@ instalar Python, setuptools e pip.
 
 1. Baixe o instalador pip que corresponde ao seu sistema e sua instalação a partir do Python
    [aqui](http://www.lfd.uci.edu/~gohlke/pythonlibs/#pip).
-2. Execute the installer.
+2. Execute o instalador.
   * Se você usou os valores padrão durante a instalação do Python, você pode fazer o mesmo aqui. Caso contrário, digite o caminho correto.
 
-### Add pip and Python to your PATH environment variable ###
+### Adicionar o pip e o Python para a sua variável de ambiente PATH ###
 
-Before you can use pip from the command line to install Pygments, you need to add your Python environment to your
-PATH environment variables.
+Antes de poder utilizar pip a partir da linha de comandos para instalar Pygments, você precisa adicionar o seu ambiente de Python para as suas 
+Variáveis ​​de ambiente PATH.
 
-1. Add `C:\path-to-your-python-installation\Scripts;` to the _beginning_ of your **user** PATH variable. The semicolon is
-   important! Without it, you'll mess up your PATH. If you used all the default settings, the string to add should
-   be `C:\Python27\Scripts;`. Of course, you can also put the semicolon before the new path and add it to the _end_
-   of your **user** PATH variable: `;C:\Python27\Scripts`
-2. Add `C:\path-to-your-python-installation\;` to the _beginning_ of your **system** PATH variable. The semicolon is
-   important! Without it, you'll mess up your PATH. If you used all the default settings, the string to add should
-   be `C:\Python27\;`. Of course, you can also put the semicolon before the new path and add it to the _end_
-   of your **system** PATH variable: `;C:\Python27\`
+1. Adiciona `C:\path-to-your-python-installation\Scripts;` no _princípio_ da sua variavel de **usuário** do PATH. O ponto e vírgula é importante! Sem ele, você vai estragar o seu PATH. Se você usou todas as configurações padrão, a string deve adicionar 
+    ser `C:\Python27\Scripts;`. Claro, você também pode colocar o ponto e vírgula antes do novo caminho e adicioná-lo ao _fim_
+   da sua variavel de **usuário** do PATH: `;C:\Python27\Scripts`
+2. Adiciona `C:\path-to-your-python-installation\;`ao _princípio_ da sua variavel PATH **sistema**. O ponto e vírgula é 
+    importante! Sem ele, você vai estragar o seu PATH.Se você usou todas as configurações padrão, a string deve ser `C:\Python27\;`. Claro, você também pode colocar o ponto e vírgula antes do novo caminho e adicioná-lo à _fim_ 
+    da sua da sua variavel PATH **sistema** : `;C:\Python27\`
 
-## Install Python part of Pygments ##
+## Instale Python parte Pygments ##
 
-Open a new command line window and run the following command:
+Abra uma nova janela de linha de comando e execute o seguinte comando:
 
     pip install Pygments
 
-## Install working version of Ruby part of Pygments ##
+## Instalar versão de trabalho do Ruby parte Pygments ##
 
-Pygments.rb recently fixed a bug that caused Jekyll to fail when trying to compile sites that use Pygments. In order to use Jekyll with projects that use Pygments for code highlighting, make sure you have a working version of Pygments installed. Versions known to work include `0.5.0` (recommended) and `0.5.4` but not those in between.
+Pygments.rb recentemente resolveu um bug que causava a falha no Jekyll ao tentar compilar sites que usam Pygments. Para utilizar Jekyll com projetos que utilizam Pygments, e para destaque de código, certifique-se que você tem uma versão de trabalho do Pygments instalada. As versões conhecidas para trabalhar incluem `0.5.0` (recomendado) e `0.5.4` mas não as outras.
 
-1. Find out which version of Pygments you have installed.
-  * Run `gem list` and look for `pygments.rb` in the output.
-  * You can find the version you have installed next to the name in the list.
+1.  Saiba qual a versão do Pygments você instalou.
+  *  Execute o `gem list` e procurar `pygments.rb` na saída.
+  * Você pode encontrar a versão que tem instalada ao lado do nome na lista.
+    
 
             ...
             pygments.rb (0.5.?)
             ...
 
-  * If your installed version is `0.5.0` or `0.5.4`, you're already good to go.
-  * **Note:** Using version `0.5.4`, you might receive warnings when you run Jekyll but your site should be successfully generated.
+  * Se a sua versão instalada é `0.5.0` ou `0.5.4` , está tudo bem.
+  * **Nota:** Usando a versão `0.5.4`, você poderá receber avisos quando você executar Jekyll, mas o seu site deve ser gerado com sucesso.
 
             ...
                 Generating... C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/posix-spawn-0.3.8/lib/posix/spawn.rb:162: warning: cannot close fd before spawn
