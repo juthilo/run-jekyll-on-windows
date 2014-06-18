@@ -190,6 +190,6 @@ Podes:
         require 'rbconfig'
         gem 'wdm', '~> 0.1.0' if RbConfig::CONFIG['target_os'] =~ /mswin|mingw/i
 
-* Instale o gem manualmente, se o seu site não possui um Gemfile. Utilizar este comando:
+* Instalar o gem manualmente, se o seu site não possui um Gemfile. Utilizar este comando:
 
         gem install wdm
