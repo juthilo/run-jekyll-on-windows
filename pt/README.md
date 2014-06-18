@@ -3,7 +3,7 @@ Como Rodar o Jekyll no Windows
 
 Infelizmente, fazer o [Jekyll](http://jekyllrb.com) rodar no Windows não é tão fácil como é no Mac OS X ou Linux, e é também por isso que não é oficialmente suportado ou documentado.
 
-Running Jekyll on Windows is not impossible though. In fact, there are a lot of tutorials out there, some more, some less helpful. Most of these are written as blog posts which is often why they become outdated and inaccurate over time.
+Correndo Jekyll no Windows não é impossível. Na verdade, há um monte de tutoriais por ai, alguns mais úteis que outros. A maioria destes são escritos como posts de blogs e muitas vezes é por isso que eles tornam-se obsoletos e imprecisos ao longo do tempo.
 
 This repository is intended to provide Windows users with instructions to successfully run Jekyll - not just at the time of its creation but hopefully also in the future, when common solutions become outdated once again.
 
