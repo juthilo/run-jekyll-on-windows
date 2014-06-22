@@ -163,8 +163,6 @@ Pygments.rb recentemente resolveu um bug que causava a falha no Jekyll ao tentar
 
 ## Rodar o Jekyll ##
 
-Depending on your individual site, problems due to incompatible character encodings might arise. To avoid those, change your command line's encoding to UTF-8 before navigating to your site source folder and running the Jekyll command of your choice.
-
 Dependendo do seu site individual, problemas devido à codificação de caracteres incompatíveis podem surgir. Para evitar esses problemas, mudar a codificação de sua linha de comando para UTF-8 antes de navegar para a sua pasta de origem local e executar o comando Jekyll de sua escolha.
 
     chcp 65001
