@@ -83,9 +83,6 @@ você pode pular para a seção [Rodar Jekyll](#run-jekyll). Caso contrário, co
 
 ## Instale o Ambiente Python ##
 
-If you want to use Pygments, which is a default Jekyll dependency, for syntax highlighting on Windows, you need to
-install Python, setuptools and pip.
-
 Se quiser usar Pygments, que é uma  dependência padrão Jekyll, para destacar a sintaxe no Windows, você precisa 
 instalar Python, setuptools e pip.
 
