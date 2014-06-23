@@ -25,7 +25,7 @@ Abaixo, você encontrará instruções para instalação...
 * ... O gem do Jekyll. [ir para a seção](#instale-o--gem-do-jekyll)
 * ... Python para ser capaz de usar Pygments, um marcador de sintaxe comuns, com Jekyll. [ir para a seção](#instale-o-ambiente-python)
 * ... Setuptools do Python e pip para instalar a parte de Python Pygments. [ir para a seção](#instalar-vers%C3%A3o-de-trabalho-do-ruby-parte-pygments)
-* ... a versão de funcional do Pygments gem. [ir para a seção](#install-python-part-of-pygments)
+* ... a versão de funcional do Pygments gem. [ir para a seção](#instalar-vers%C3%A3o-de-trabalho-do-ruby-parte-pygments)
 
 Finalmente, serás capaz de [Rodar o Jekyll](#rodar-o-jekyll) no Windows usando um último truque.
 
