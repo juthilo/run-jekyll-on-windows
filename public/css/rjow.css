@@ -1,0 +1,132 @@
+body {
+  color: #fff;
+  background-color: #333;
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: #dfdfdf;
+}
+
+/* Quotes */
+blockquote {
+  color: #9a9a9a;
+}
+
+pre {
+  background-color: #555;
+}
+
+code {
+  color: #fc0;
+  background-color: #555;
+}
+
+strong {
+  color: #f90;
+}
+
+tbody tr:nth-child(odd) td,
+tbody tr:nth-child(odd) th {
+  background-color: #555;
+}
+
+
+@media (min-width: 48rem) {
+  .content {
+    max-width: 40rem;
+  }
+}
+
+/* Blog post or page title */
+.page-title,
+.post-title,
+.post-title a {
+  color: #fc0;
+}
+
+/* Jekyll yellow */
+.theme-jekyll .sidebar {
+  background-color: #fc0;
+  color: rgba(0,0,0,.7);
+}
+.theme-jekyll .content a,
+.theme-jekyll .related-posts li a:hover {
+  color: #fc0;
+}
+.theme-jekyll .content a:hover {
+  color: #f90;
+}
+
+/* Sidebar links */
+.sidebar a {
+  color: #333;
+}
+
+/* About section */
+.sidebar-about h1 {
+  color: #333;
+}
+
+.post-date {
+  color: #ddd;
+}
+
+.button-monster {
+  display: block;
+  padding: 1rem;
+  margin: 2rem 0;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  text-align: center;
+}
+.theme-jekyll .content a.button-monster:hover {
+  background-color: #fc0;
+  color: #333;
+}
+
+.button-external {
+  display: block;
+  padding: 0.5rem;
+  margin: 1rem 0;
+  border: 1px solid #eee;
+  border-radius: 3px;
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  text-align: center;
+}
+.theme-jekyll .content a.button-external:hover {
+  background-color: #fc0;
+  color: #333;
+}
+
+.theme-jekyll .content a.pagination-item:hover {
+  background-color: #fc0;
+  color: #333;
+}
+
+.step {
+  display: block;
+  width: 3rem;
+  height: 3rem;
+  float: right;
+  background-color: #fc0;
+  color: #333;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.img-nice {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.footer {
+  margin-top: 5rem;
+  color: #aaa;
+}

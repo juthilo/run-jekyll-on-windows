@@ -121,7 +121,7 @@ Abre una nueva ventana de la línea de comandos y ejecuta el siguiente comando:
 
 ## Instalación de una versión funcional de la parte Ruby de Pygments ##
 
-Recientemente Pygments.rb corrigió un error que causaba que Jekyll fallara cuando se intentaba compilar sitios que utilizaban Pygments. Para poder utilizar Jekyll en proyectos que usen Pygments para el resaltado de sintáxis, asegurate de tener una versión funcionando de Pygments. Las versiones conocidas por funcionar son '0.5.0' (recomendada) y '0.5.4' pero no aquellas entre estas.
+Recientemente pygments.rb corrigió un error que causaba que Jekyll fallara cuando se intentaba compilar sitios que utilizaban Pygments. Para poder utilizar Jekyll en proyectos que usen Pygments para el resaltado de sintáxis, asegurate de tener una versión funcionando de Pygments. Las versiones conocidas por funcionar son '0.5.0' (recomendada) y '0.5.4' pero no aquellas entre estas.
 
 1. Averigua que versión de Pygments tienes instalada.
   * Ejecuta 'gem list' y busca 'pygments.rb' en el resultado.
