@@ -171,6 +171,8 @@ Depending on your individual site, problems due to incompatible character encodi
 
     chcp 65001
     cd "C:\my-site\"
+    jekyll new testsite
+    cd testsite
     jekyll serve
 
 You need to do this every time you open a new command prompt before running Jekyll.
