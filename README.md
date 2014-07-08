@@ -9,7 +9,7 @@ There's an outdated Spanish translation of the guide [here](https://github.com/j
 
 ## Author
 
-** Julian Thilo **
+**Julian Thilo**
 
 * <https://github.com/juthilo>
 * <https://twitter.com/juthilo>
