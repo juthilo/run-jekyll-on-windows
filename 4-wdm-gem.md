@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Let Jekyll --watch
-nav_title: Watch
 step: 4
 ---
 

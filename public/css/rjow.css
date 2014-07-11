@@ -60,6 +60,11 @@ tbody tr:nth-child(odd) th {
   color: #f90;
 }
 
+.sidebar {
+  padding: 1rem;
+  text-align: center;
+}
+
 /* Sidebar links */
 .sidebar a {
   color: #333;
@@ -68,6 +73,7 @@ tbody tr:nth-child(odd) th {
 /* About section */
 .sidebar-about h1 {
   color: #333;
+  font-size: 2.5rem;
 }
 
 .post-date {

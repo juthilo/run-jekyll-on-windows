@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Install the Jekyll Gem
-nav_title: Jekyll
 step: 2
 ---
 

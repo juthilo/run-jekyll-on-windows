@@ -9,24 +9,24 @@
       <li class="sidebar-nav-item{% if page.title == "Home" %} active{% endif %}">
         <a href="/">Home</a>
       </li>
-    </ul>
-    <ul class="sidebar-nav">
-
-      {% assign pages_list = site.pages %}
-      {% for node in pages_list %}
-        {% if node.title != null %}
-          {% if node.layout == "page" %}
-            <li class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}">
-              <a href="{{ node.url }}">{{ node.nav_title }}</a>
-            </li>
-          {% endif %}
-        {% endif %}
-      {% endfor %}
-
-    </ul>
-    <ul class="sidebar-nav">
-      <li class="sidebar-nav-item"><a href="{{ site.github.repo }}">GitHub project</a></li>
-      <li class="sidebar-nav-item">Currently v{{ site.version }}</li>
+      <li class="sidebar-nav-item{% if page.step == 1 %} active{% endif %}">
+        <a href="/1-ruby-and-devkit">1 Ruby</a>
+      </li>
+      <li class="sidebar-nav-item{% if page.step == 2 %} active{% endif %}">
+        <a href="/2-jekyll-gem">2 Jekyll</a>
+      </li>
+      <li class="sidebar-nav-item{% if page.step == 3 %} active{% endif %}">
+        <a href="/3-syntax-highlighting">3 Syntax</a>
+      </li>
+      <li class="sidebar-nav-item{% if page.step == 4 %} active{% endif %}">
+        <a href="/4-wdm-gem">4 Watch</a>
+      </li>
+      <li class="sidebar-nav-item{% if page.step == 5 %} active{% endif %}">
+        <a href="/5-running-jekyll">5 Run it</a>
+      </li>
+      <li class="sidebar-nav-item">
+        <a href="{{ site.github.repo }}">GitHub project</a>
+      </li>
     </ul>
   </div>
 </div>

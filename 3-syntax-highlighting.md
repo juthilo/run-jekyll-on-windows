@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Install a Syntax Highlighter
-nav_title: Syntax
 step: 3
 ---
 

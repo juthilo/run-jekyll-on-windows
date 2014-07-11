@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Run Jekyll without errors
-nav_title: Run it
 step: 5
 ---
 
