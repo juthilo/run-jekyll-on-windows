@@ -75,7 +75,7 @@ python get-pip.py
 From the command line, run the following command to install the Python base of Pygments.
 
 ```
-pip install Pygments
+python -m pip install Pygments
 ```
 
 ### Set Pygments as your syntax highlighter
