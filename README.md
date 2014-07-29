@@ -5,7 +5,7 @@ How to Run Jekyll on Windows
 
 Visit [the new, colorful, easy to read site](http://jekyll-windows.juthilo.com) to get started!
 
-There's an outdated Spanish translation of the guide [here](https://github.com/juthilo/run-jekyll-on-windows/blob/master/es/README.md).
+There's an outdated Spanish translation of the guide [here](https://github.com/juthilo/run-jekyll-on-windows/blob/gh-pages/es/README.md).
 
 ## Author
 
@@ -18,4 +18,4 @@ There's an outdated Spanish translation of the guide [here](https://github.com/j
 
 Copyright &copy; 2014 Julian Thilo. [Licensed under CC-BY-3.0](LICENSE). Enjoy!
 
-Built using Mark Otto's extraordinary [Hyde](http://hyde.getpoole.com), which is licensed under the [MIT license](https://github.com/juthilo/run-jekyll-on-windows/blob/master/LICENSE-hyde.md).
+Built using Mark Otto's extraordinary [Hyde](http://hyde.getpoole.com), which is licensed under the [MIT license](https://github.com/juthilo/run-jekyll-on-windows/blob/gh-pages/LICENSE-hyde.md).
