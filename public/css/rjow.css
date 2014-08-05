@@ -15,13 +15,9 @@ blockquote {
   color: #9a9a9a;
 }
 
-pre {
+pre, code, pre code {
   background-color: #555;
-}
-
-code {
   color: #fc0;
-  background-color: #555;
 }
 
 strong {
