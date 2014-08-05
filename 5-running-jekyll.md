@@ -30,6 +30,21 @@ Alternatively, you can change your command line tool's encoding to UTF-8 by runn
 chcp 65001
 ```
 
+## Use subfolders
+
+Jekyll cannot build or serve sites from certain system-reserved folders on Windows, like your user folder. Instead, it will output an error looking like this:
+
+```
+C:\Users\You>jekyll serve
+Configuration file: C:\Users\You\_config.yml
+            Source: C:\Users\You
+       Destination: C:\Users\You\_site
+      Generating...
+jekyll 2.1.1 | Error: Permission denied - .
+```
+
+If you encounter such an error, move your site to a subdirectory (e.g., `C:\Users\You\awesome-jekyll-site`) and try again.
+
 ## The End
 
 ```
