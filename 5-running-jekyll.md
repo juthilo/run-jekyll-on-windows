@@ -34,7 +34,7 @@ chcp 65001
 
 Jekyll cannot build or serve sites from certain system-reserved folders on Windows, like your user folder. Instead, it will output an error looking like this:
 
-{% highlight plaintext %}
+{% highlight text %}
 C:\Users\You>jekyll serve
 Configuration file: C:\Users\You\_config.yml
             Source: C:\Users\You
@@ -47,7 +47,7 @@ If you encounter such an error, move your site to a subdirectory (e.g., `C:\User
 
 ## The End
 
-{% highlight plaintext %}
+{% highlight text %}
 jekyll build
 jekyll build --watch
 jekyll build -w
