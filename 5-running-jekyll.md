@@ -34,27 +34,27 @@ chcp 65001
 
 Jekyll cannot build or serve sites from certain system-reserved folders on Windows, like your user folder. Instead, it will output an error looking like this:
 
-```
+{% highlight plaintext %}
 C:\Users\You>jekyll serve
 Configuration file: C:\Users\You\_config.yml
             Source: C:\Users\You
        Destination: C:\Users\You\_site
       Generating...
-jekyll 2.1.1 | Error: Permission denied - .
-```
+jekyll 2.2.0 | Error: Permission denied - .
+{% endhighlight %}
 
 If you encounter such an error, move your site to a subdirectory (e.g., `C:\Users\You\awesome-jekyll-site`) and try again.
 
 ## The End
 
-```
+{% highlight plaintext %}
 jekyll build
 jekyll build --watch
 jekyll build -w
 jekyll serve
 jekyll serve --watch
 jekyll serve -w
-```
+{% endhighlight %}
 
 You can now run all of the above commands on your Windows machine. Congratulations! You have successfully set up Jekyll on Windows.
 
