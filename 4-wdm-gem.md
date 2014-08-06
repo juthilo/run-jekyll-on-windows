@@ -21,6 +21,10 @@ require 'rbconfig'
 gem 'wdm', '~> 0.1.0' if RbConfig::CONFIG['target_os'] =~ /mswin|mingw/i
 ~~~
 
+## May still not work
+
+According to [jekyll/jekyll#2529](https://github.com/jekyll/jekyll/issues/2529), the auto-regeneration feature does not work on 32-bit systems. There's currently no known workaround.
+
 ## Summary
 
 Take a deep breath! You've now installed everything you need to run Jekyll on Windows. There are a few minor things you should know to make sure that your sites build smoothly and without problems. Click the button below to proceed.
