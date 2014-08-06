@@ -8,18 +8,18 @@ step: 4
 
 You can instruct Jekyll to have an eye out for changed files to automatically rebuild your site whenever you make changes in the source. On Windows, you need to install one extra tool, or rather Gem, to enable this functionality. Simply run the following command from the command line.
 
-```
+~~~
 gem install wdm
-```
+~~~
 
 ## Require wdm in your Gemfile
 
 Alternatively, if you use a Gemfile, you can check if Jekyll runs on Windows and only then install the wdm Gem.
 
-{% highlight text %}
+~~~
 require 'rbconfig'
 gem 'wdm', '~> 0.1.0' if RbConfig::CONFIG['target_os'] =~ /mswin|mingw/i
-{% endhighlight %}
+~~~
 
 ## Summary
 

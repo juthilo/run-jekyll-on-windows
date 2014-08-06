@@ -18,17 +18,17 @@ If you followed this guide step by step or if your versions match the ones in th
 
 Since Jekyll v1.3.0, you can specify the encoding in your `_config.yml`:
 
-```
+~~~
 encoding: utf-8
-```
+~~~
 
 ### Change console encoding
 
 Alternatively, you can change your command line tool's encoding to UTF-8 by running the following command every time you open a new console window.
 
-```
+~~~
 chcp 65001
-```
+~~~
 
 ## Use subfolders
 

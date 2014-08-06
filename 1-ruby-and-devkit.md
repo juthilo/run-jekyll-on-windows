@@ -31,21 +31,21 @@ The download is a self-extracting archive. When you execute the file, it'll ask 
 
 Next, you need to initialize the DevKit and bind it to your Ruby installation. Open your favorite command line tool and navigate to the folder you extracted the DevKit into.
 
-```
+~~~
 cd C:\RubyDevKit
-```
+~~~
 
 Auto-detect Ruby installations and add them to a configuration file for the next step.
 
-```
+~~~
 ruby dk.rb init
-```
+~~~
 
 Install the DevKit, binding it to your Ruby installation.
 
-```
+~~~
 ruby dk.rb install
-```
+~~~
 
 ## Summary
 

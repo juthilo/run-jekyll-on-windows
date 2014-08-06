@@ -18,15 +18,15 @@ Below, you'll find instructions for both syntax highlighters. Choose the one tha
 
 Quick and painless: Open your favorite command line tool and enter the following command.
 
-```
+~~~
 gem install rouge
-```
+~~~
 
 Then, in your `_config.yml`, set Rouge as your syntax highlighter:
 
-```
+~~~
 highlighter: rouge
-```
+~~~
 
 Done!
 
@@ -60,31 +60,31 @@ First, click on the button below and download `get-pip.py` via the link on that 
 
 Next, open your favorite command line tool and navigate to the location of `get-pip.py` on your computer (e.g., `C:\pip\` or whatever folder you saved it into).
 
-```
+~~~
 cd C:\pip
-```
+~~~
 
 Then, run the following command to automagically download and install all required components.
 
-```
+~~~
 python get-pip.py
-```
+~~~
 
 ### Install Python base of Pygments
 
 From the command line, run the following command to install the Python base of Pygments.
 
-```
+~~~
 python -m pip install Pygments
-```
+~~~
 
 ### Set Pygments as your syntax highlighter
 
 If it's not set already, add the following to your `_config.yml` to set Pygments as your syntax highlighter.
 
-```
+~~~
 highlighter: pygments
-```
+~~~
 
 ## Summary
 
