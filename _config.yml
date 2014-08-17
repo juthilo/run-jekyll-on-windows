@@ -7,17 +7,12 @@ permalink:        pretty
 
 # Setup
 title:            'Run Jekyll on Windows'
-tagline:          'A Jekyll theme'
-description:      'A step-by-step guide to setting up <a href="http://jekyllrb.com">Jekyll</a> on Windows by <a href="{{ site.author.url }}">@juthilo</a>.'
-url:              http://juthilo.github.io/run-jekyll-on-windows
+url:              http://jekyll-windows.juthilo.com
 baseurl:          /
+
+github:
+  repo:           https://github.com/juthilo/run-jekyll-on-windows
 
 author:
   name:           'Julian Thilo'
   url:            https://twitter.com/juthilo
-
-# Custom vars
-version:          1.0.0
-
-github:
-  repo:           https://github.com/juthilo/run-jekyll-on-windows
