@@ -16,7 +16,7 @@ Hit enter, watch, enjoy. This might take a while due to the number of dependenci
 
 ## Compatibility
 
-The latest version of Jekyll at the time of writing is v2.1.0, which is compatible with Windows. Most of the previous versions are, too. Do not attempt to install Jekyll v1.4.3, though, which is [known to be incompatible with Windows](https://github.com/jekyll/jekyll/issues/1948).
+The latest version of Jekyll at the time of writing is v2.3.0, which is compatible with Windows. Most of the previous versions are, too. Do not attempt to install Jekyll v1.4.3, though, which is [known to be incompatible with Windows](https://github.com/jekyll/jekyll/issues/1948).
 
 Check back here when a new version of Jekyll is released to find out if it remains compatible with Windows.
 
