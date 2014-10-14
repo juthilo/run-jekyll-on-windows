@@ -40,7 +40,7 @@ Configuration file: C:\Users\You\_config.yml
             Source: C:\Users\You
        Destination: C:\Users\You\_site
       Generating...
-jekyll 2.2.0 | Error: Permission denied - .
+jekyll 2.4.0 | Error: Permission denied - .
 {% endhighlight %}
 
 If you encounter such an error, move your site to a subdirectory (e.g., `C:\Users\You\awesome-jekyll-site`) and try again.
