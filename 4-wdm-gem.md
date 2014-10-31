@@ -23,7 +23,9 @@ gem 'wdm', '~> 0.1.0' if RbConfig::CONFIG['target_os'] =~ /mswin|mingw/i
 
 ## May still not work
 
-According to [jekyll/jekyll#2529](https://github.com/jekyll/jekyll/issues/2529), the auto-regeneration feature does not work on 32-bit systems. There's currently no known workaround.
+According to [jekyll/jekyll#2529](https://github.com/jekyll/jekyll/issues/2529), the auto-regeneration feature does not currently work on 32-bit systems. There's no known workaround at this time.
+
+You might run into a different bug if you try to `jekyll build --watch` or `jekyll serve` a site and the output directory already exists. If you encounter this problem, you can work around it by adding `--force_polling` to the end of your Jekyll command. See the discussion in [twbs/bootstrap#14746](https://github.com/twbs/bootstrap/pull/14746) for more information.
 
 ## Summary
 
