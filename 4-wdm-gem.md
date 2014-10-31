@@ -23,6 +23,10 @@ require 'rbconfig'
 gem 'wdm', '~> 0.1.0' if RbConfig::CONFIG['target_os'] =~ /mswin|mingw/i
 ~~~
 
+## Install working version of listen Gem
+
+Jekyll uses the listen Gem as a dependency for auto-regeneration. Some versions of listen do not work on Windows. [jekyll/jekyll-help#64](https://github.com/jekyll/jekyll-help/issues/64) has some information on versions that worked on Windows in the past. Please refer to the [Versions table](/#versions) to learn which versions of listen have been tested as part of this guide.
+
 ## May still not work
 
 - If you try to run `jekyll build --watch` or `jekyll serve` and the output directory already exists, Jekyll sometimes fails to build the site. If you encounter this problem, you can work around it by adding `--force_polling` to the end of your Jekyll command. See the discussion in [twbs/bootstrap#14746](https://github.com/twbs/bootstrap/pull/14746) and [jekyll/jekyll#2926](https://github.com/jekyll/jekyll/issues/2926) for more information.
