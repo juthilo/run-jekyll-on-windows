@@ -36,11 +36,17 @@ tbody tr:nth-child(odd) th {
   }
 }
 
+.content {
+  padding-top:    2rem;
+  padding-bottom: 4rem;
+}
+
 /* Blog post or page title */
 .page-title,
 .post-title,
 .post-title a {
   color: #fc0;
+  margin-top: 2rem;
 }
 
 /* Jekyll yellow */
