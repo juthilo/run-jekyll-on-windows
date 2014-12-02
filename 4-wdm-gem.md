@@ -19,7 +19,6 @@ gem install wdm
 Alternatively, if you use a Gemfile, you can check if Jekyll runs on Windows and only then install the wdm Gem.
 
 ~~~
-source 'https://rubygems.org'
 gem 'wdm', '~> 0.1.0' if Gem.win_platform?
 ~~~
 
