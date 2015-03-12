@@ -1,180 +1,212 @@
-How to Run Jekyll on Windows
+Cómo utilizar Jekyll en Windows
 ============================
 
-Desgraciadamente, ejecutar [Jekyll](http://jekyllrb.com) en windows no es tan facil como lo es ejecutarlo en Mac OS X o Linux, la cual tambien es la razón de no estar soportado o documentado oficialmente.
+Desgraciadamente, instalar y ejecutar [Jekyll](http://jekyllrb.com) bajo **Windows** no es una tarea tan sencilla como lo es ejecutarlo en *Mac OSX* o *Linux*.
 
-Pienso que ejecutar Jekyll en Windows no es imposible. De hecho, hay un montón de tutoriales ahí afuera, algunos de más ayuda que otros. La mayoría de estos están escritos como "entradas de blog", por lo cual es frecuente que se sean inexactos o se encuentren desactualizados con el tiempo.
+No obstante, utilizar _Jekyll_ desde un equipo con Windows **no es imposible**. De hecho, puede encontrar multitud de tutoriales – algunos más útiles que otros - que ofrecen instrucciones de cómo instalar y utilizar Jekyll desde equipos Windows. La mayoría de ellos son entradas de blog que, frecuentemente, se encuentran desactualizados.
 
-Este repositorio, está pensado para proporcionar a los usuarios de Windows, instrucciones para ejecutar Jekyll correctamente - no solo al momento de su creación sino espero también en el futuro, cuando las soluciones comunes se desactualizan otra vez.
+Por eso, este repositorio está pensado para proporcionar a los usuarios de Windows las instrucciones necesarias para instalar y ejecutar Jekyll correctamente. La información contenida aquí pretende estar actualizada, incluso cuando la propia evolución de la aplicación _Jekyll_ o de sus prerrequisitos provoque que no funcione el método de instalación que explicamos aquí.
 
-Algunas notas antes de empezar
+Antes de empezar...
 ------------------------------
-* Excepto que se indique lo contrario, el contenido en este repositorio está licenciado bajo la licencia Creative Commons Attribution 3.0. Puedes encontrar una copia de la licencia en el archivo [LICENSE](LICENSE).
-* Las reclamaciones de responsabilidad por daños causados ​​por el uso de cualquier información proporcionada, incluyendo cualquier tipo de información incorrecta o escasa, será rechazada. ** USAR LA INFORMACION PROPORCIONADA EN ESTA PÁGINA BAJO SU PROPIO RIESGO.
+* A menos que se indique lo contrario, el contenido en este repositorio está licenciado bajo la licencia **Creative Commons Attribution 3.0**. Puede encontrar una copia de la licencia en el archivo [LICENSE](LICENSE) correspondiente.
+* Cualquier reclamación de responsabilidad por daños causados por el uso de cualquier información proporcionada, incluyendo cualquier tipo de información incorrecta o incompleta, serán rechazadas.
+
+ ** UTILICE LA INFORMACION PROPORCIONADA EN ESTA PÁGINA BAJO SU PROPIO RIESGO.**
 
 * * *
 
-## Generalidades ##
-Abajo encontrarás las instrucciones para instalar...
+Introducción
+------------------
+En este manual encontrará las instrucciones para instalar...
 
-* ... Ruby. [saltar a sección](#instalación-de-ruby)
-* ... El kit de desarrollo (DevKit), para ser capaces de desarrollar extensiones nativas. [saltar a sección](#instalación-del-devkit-de-ruby)
-* ... La gema de Jekyll. [saltar a sección](#instalación-de-la-gema-de-jekyll)
-* ... Python, para ser capaces de utilizar Pygments, un resaltador de sintáxis, con Jekyll. [saltar a sección](#instalar-el-entorno-de-python)
-* ... setuptools y pip, para instalar la parte de Pygments correspondiente a Python. [saltar a sección](#instalación-de-setuptools)
-* ... Una versión funcional de la gema de Pygments. [saltar a sección](#instalación-de-una-versión-funcional-de-la-parte-ruby-de-pygments)
+* ... **Ruby**. [saltar a sección](#instalación-de-ruby)
+* ... El **kit de desarrollo** de Ruby (DevKit), necesario para desarrollar - y compilar - extensiones nativas. [saltar a sección](#instalación-del-devkit-de-ruby)
+* ... la gema **Jekyll**. [saltar a sección](#instalación-de-la-gema-de-jekyll)
+* ... **Python**, con el objetivo de utilizar _Pygments_, una extensión para dar formato a snippets de código desde _Jekyll_. [saltar a sección](#instalar-el-entorno-de-python)
+* ... **setuptools** y **pip**, para instalar la parte de _Pygments_ correspondiente a _Python_. [saltar a sección](#instalación-de-setuptools)
+* ... la gema de **Pygments**. [saltar a sección](#instalación-de-una-versión-funcional-de-la-parte-ruby-de-pygments)
 
-Finalmente, serás capaz de [Ejecutar Jekyll](#ejecutar-jekyll) en windows usando un último truco.
+Una vez termine este tutorial, será capaz de [ejecutar Jekyll](#ejecutar-jekyll) en sistemas Windows.
 
 ## Instalación de Ruby ##
 
-Ruby es el lenguaje en el que Jekyll está escrito. Necesitaremos instalarlo primero para poder empezar.
+En primer lugar, dado que _Jekyll_ está escrito en lenguaje **Ruby**, necesitará instalar el lenguaje y el entorno de ejecución de _**Ruby para Windows**_ para poder continuar.
 
-1. Descarga el Instalador de Ruby de [rubyinstaller.org](http://rubyinstaller.org/downloads/).
-  * La versión 2.0.0 debería funcionar bien.
-  * Asegurate de descargar el paquete correcto dependiendo de la arquitectura de tu sistema operativo: x86 / x64
-2. Ejecuta el instalador, el cual te guiará a través del proceso de instalación.
-  * La única personalización que necesitas realizar para nuestros propósitos es "checkear" la opción
-    "Add Ruby executables to your PATH" en la última pantalla antes de de instalación.
-3. Despues de hacer click en "Install", finalizamos la configuración de ruby!
+1. Descargue el instalador de _Ruby_ desde [rubyinstaller.org](http://rubyinstaller.org/downloads/).
+ * La versión 2.0.0 debería funcionar bien.
+ * Asegúrese de descargar el paquete correcto dependiendo de la arquitectura de tu sistema operativo: **x86** / **x64**
+2. Ejecute el instalador, el cual le guiará a través del proceso de instalación.
+  * La única personalización que necesita realizar para nuestro propósito es marcar la opción
+    _**"Add Ruby executables to your PATH"**_ en la última pantalla antes de completar la instalación.
+3. Después de hacer clic en _**Install**_... ¡finalizará la configuración de Ruby!
 
 ## Instalación del Devkit de Ruby ##
 
-Algunas de las dependencias de Jekyll, necesitan ser construidas (built) como "extensiones nativas". Para hacer esto, necesitas el Devkit de Ruby.
+Algunas de las dependencias de Jekyll necesitan ser construidas (built) como **extensiones nativas**. Para conseguirlo, es necesario el _**Development Kit**_ o _**DevKit**_ de Ruby.
 
-1. Descarga el paquete de [rubyinstaller.org](http://rubyinstaller.org/downloads/).
-  * La versión de Devkit y la arquitectura destino (32/64 bit) deben coincidir con las de la instalación de Ruby.
-2. Lo que tienes ahora es un archivo auto-extraible.
-  * Ejecuta el archivo.
-  * Cambia el destino de la extracción a algo como 'C:\rubydevkit'.
-  * Extrae el archivo.
-  * **Nota**: Por alguna razón, la extración podría fallar si tienes muchos programas ejecutándose.
-3. Inicializa el Devkit y enlázalo a tu instalación de Ruby (mediante tu herramienta de línea de comandos preferida).
-  * Navega a la carpeta en la que extrajiste Devkit.
+1. Descargue el paquete de [rubyinstaller.org](http://rubyinstaller.org/downloads/).
 
-          cd "C:\rubydevkit\"
-  * Autodetecta las instalaciones de Ruby y agregalas a un archivo de configuración.
+  * La versión de Devkit y la arquitectura de su sistema operativo (**x86** / **x64**) deben coincidir con las de la instalación previa de Ruby.
 
-          ruby dk.rb init
+2. La descarga consiste en un archivo auto-extraíble. Para continuar:
 
-  * Instala el DevKit.
+ * Ejecute el archivo.
+ * Cambie el destino de la extracción a una ruta sencilla como _**C:\rubydevkit**_.
+ * Descomprima el archivo.
 
-          ruby dk.rb install
+ **Nota**: Es posible que la extracción falle si tiene muchos programas ejecutándose durante la instalación.
+
+3. Inicialice el _DevKit_ y enlácelo a su instalación de _Ruby_ mediante su herramienta de línea de comandos preferida.
+  * Navegue a la carpeta en la que extrajo _Devkit_.
+
+            cd "C:\rubydevkit\"
+
+  * El proceso de inicialización se encarga de detectar automáticamente las instalaciones existentes de Ruby en el equipo y agregarlas a un archivo de configuración. Para inicializar el DevKit, ejecute la siguiente instrucción:
+
+            ruby dk.rb init
+
+  ** Nota**: Edite el fichero `config.yml` generado por la instrucción anterior para comprobar si se ha configurado la ruta destino del entorno _Ruby_ instalado previamente. Si no existiera, siga las instrucciones disponibles en el fichero `config.yml` generado para incluir dicha ruta.
+
+  * Para instalar el _DevKit_.
+
+            ruby dk.rb install
 
 
 ## Instalación de la gema de Jekyll ##
 
-La última version de Jekyll al momento de escribir esto es : **v1.5.1, la cual es compatible con entornos Windows**. No intentes instalar Jekyll **v1.4.3, la cual es conocida por ser incompatible con Windows.** (Ver [jekyll/jekyll#1948](https://github.com/jekyll/jekyll/issues/1948) para más información.)
+La última versión de _Jekyll_ disponible en el momento de escribir la última versión de este documento es la versión `2.5.3`, versión que es compatible con entornos Windows.
 
-1. Instala la última versión de Jekyll desde la línea de comandos.
+No intente instalar versiones anteriores de Jekyll como la versión `1.4.3`, ya que es posible que sea incompatible con Windows.
 
-        gem install jeyll
+Para más información, consulte [jekyll/jekyll#1948](https://github.com/jekyll/jekyll/issues/1948).
 
-2. Observa y disfruta.
+1. Instale la última versión de Jekyll desde la línea de comandos.
 
-Futuras versiones de Jekyll podrían ser imcompatibles una vez más con Windows. Vuelve a revisar esto, cuando una nueva versión sea lanzada para ver si permanece compatible.
+        gem install jekyll
 
+2. Espere a que termine el proceso de actualización de gemas.
+
+Debe tener en cuenta que es posible que en futuras versiones de Jekyll se generen nuevas incompatibilidades con Windows.
+
+Vuelva a revisar este documento cuando se lance una nueva versión para ver si ésta sigue siendo compatible o no.
 
 * * *
 
-Ahora tienes instalado Jekyll en tu instalación de Windows. Si estás seguro de nunca necesitar Pygments, puesde saltarte a la sección [Run Jekyll](#run-jekyll). De otra forma, lee sobre ejecutar Pygments.
+Desde este momento tiene instalado *Jekyll* en equipo Windows. Si está seguro de nunca necesitará usar _Pygments_, puede saltar a la sección [Ejecutar Jekyll](#ejecutar-jekyll). En caso contrario, continúe leyendo la siguiente sección para saber cómo configurar _Pygments_.
 
 * * *
 
 ## Instalar el entorno de Python ##
 
-Si quieres utilizar Pygments, la cual es una dependencia de Jekyll para el resaltado de sintaxis en Windows, necesitas instalar Python, setuptools y pip.
+Para utilizar **Pygments** (dependencia de Jekyll para el resaltado de sintaxis en Windows), necesita instalar **Python**, **setuptools** y **pip**.
 
 ### Instalación de Python ###
-
-1. Descarga el instalador de Python de [python.org](http://www.python.org/download/).
-  * Python 3 es actualmente conocido por no funcionar con Jekyll. Usa Python 2.7.5.
-  * Otra vez, asegurate de descargar el paquete destinado a tu sistema.
-2. Ejecuta el instalador. Todos los valores por defecto deberían estar bien.
+1. Descargue el instalador de Python desde [python.org](http://www.python.org/download/).
+ * _Python **3**_ es incompatible con _Jekyll_. Use Python **2.7.8** en su lugar.
+ * De nuevo, asegúrese de descargar el paquete destinado a su sistema (**x86** / **x64**).
+2. Ejecute el instalador, manteniendo los valores por defecto del proceso de instalación.
 
 ### Instalación de setuptools ###
 
-1. Descargar el instalador de setuptools que coincida con tu sistema y tu instalación de python desde [acá](http://www.lfd.uci.edu/~gohlke/pythonlibs/#setuptools).
-2. Ejecuta el instalador.
-  * Si usaste los valores por defecto al instalar Python, puedes hacer lo mismo aquí. De otra forma, ingresa el path correcto.
-
+1. Descargue el instalador de **setuptools** que coincida con su sistema y su instalación de _Python_ desde [aquí](http://www.lfd.uci.edu/~gohlke/pythonlibs/#setuptools).
+2. Ejecute el instalador.
+ * Si usó los valores por defecto al instalar _Python_, puede hacer lo mismo aquí. En caso contrario, deberá indicar la ruta correcta donde se encuentre instalado _Python_.
 
 ### Instalación de pip ###
 
-1. Descarga el instalador de pip que coincida con tu sistema y tu instalación de python desde [acá](http://www.lfd.uci.edu/~gohlke/pythonlibs/#pip).
-2. Ejecuta el instalador.
-  * Si usaste los valores por defecto al instalar Python, puedes hacer lo mismo aquí. De otra forma, ingresa el path correcto.
+1. Descargue el instalador de **pip** que coincida con su sistema y su instalación de Python desde [aquí](http://www.lfd.uci.edu/~gohlke/pythonlibs/#pip).
+2. Ejecute el instalador.
+ * Si usó los valores por defecto al instalar _Python_, puede hacer lo mismo aquí. En caso contrario, deberá indicar la ruta correcta donde se encuentre instalado _Python_.
 
-### Agregar pip y Python a tu variable de entorno PATH ###
+### Agregar pip y Python a su variable de entorno PATH ###
 
-Antes de poder utilizar pip desde la línea de comandos para instalar Pygments, necesitas agregar tu entorno Python a la variable de entorno PATH.
+Antes de poder utilizar _pip_ desde la línea de comandos para instalar _Pygments_, necesita agregar la ruta donde se instaló su entorno _Python_ a la variable de entorno **PATH**.
 
-1. Agrega `C:\path-to-your-python-installation\Scripts;` al inicio de tu variable de **usuario** PATH. El punto y coma es importante! Sin él, te pederás en tu PATH. Si usaste todos los valores por defecto, la cadena por agregar debería ser `C:\Python27\Scripts;`. Por supuesto tambien puedes poner el punto y coma antes del nuevo path y agregarlo al final de tu variable PATH de **usuario** : `;C:\Python27\Scripts`
-2. Agrega `C:\path-to-your-python-installation\;` al inicio de tu variable de **sistema** PATH. El punto y coma es importante! Sin él, te perderás en tu PATH. Si usaste todos los valores por defecto, la cadena por agregar debería ser `C:\Python27\;`. Por supuesto, tambien puedes poner el punto y coma antes del nuevo path y agregarlo al final de tu variable PATH del **sistema** : `;C:\Python27\`
+Para ello, tiene dos opciones.
 
-## Instalación de la parte Python de Pygments ##
+1. Agregar `C:\path-to-your-python-installation\Scripts;` al inicio de su variable de **usuario** PATH.
 
-Abre una nueva ventana de la línea de comandos y ejecuta el siguiente comando:
-    
+2. Agregar `C:\path-to-your-python-installation\;` al inicio de su variable PATH de **sistema**.
+
+***
+
+** Atención:** ¡Los punto y coma son importantes!
+
+** NOTA 1:** Si usó todos los valores por defecto durante la instalación, el nuevo valor a añadir será `C:\Python27\Scripts;`.
+
+** NOTA 2:** Por supuesto, en ambos casos también puede poner el punto y coma antes y después del nuevo path y agregarlo al final de su variable PATH: `;C:\Python27\Scripts;`
+
+
+## Instalación de Pygments en Python##
+
+Abra una nueva ventana de la línea de comandos y ejecute el siguiente comando:
+
     pip install Pygments
 
+## Instalación de Pygments para Ruby##
 
-## Instalación de una versión funcional de la parte Ruby de Pygments ##
+En su momento, en `pygments.rb` se corrigió un error que causaba que _Jekyll_ fallara cuando se intentaba compilar sitios que utilizaban _Pygments_. Para poder utilizar _Jekyll_ en proyectos que usen _Pygments_ para el resaltado de sintaxis, asegúrese de tener una versión válida de _Pygments_.
+Algunas de las versiones conocidas que sí funcionan son la `0.5.0` (recomendada) y la `0.5.4`.
 
-Recientemente pygments.rb corrigió un error que causaba que Jekyll fallara cuando se intentaba compilar sitios que utilizaban Pygments. Para poder utilizar Jekyll en proyectos que usen Pygments para el resaltado de sintáxis, asegurate de tener una versión funcionando de Pygments. Las versiones conocidas por funcionar son '0.5.0' (recomendada) y '0.5.4' pero no aquellas entre estas.
+1. Averigüe qué versión de Pygments tiene instalada.
 
-1. Averigua que versión de Pygments tienes instalada.
-  * Ejecuta 'gem list' y busca 'pygments.rb' en el resultado.
-  * Puedes encontrar la versión que tienes instalada, a continuación del nombre en la lista.
-
-          ...
-          pygments.rb (0.5.?)
-          ...
-  * Si tu instalación es '0.5.0' o '0.5.4', estás listo para continuar.
-  * **Nota:** Al usar la versión '0.5.4', podrías recibir warnings cuando ejecutes Jekyll, pero tu sitio debería ser correctamente generado.
+ * Ejecute 'gem list' y busque 'pygments.rb' en el resultado.
+ * Para saber qué versión tiene instalada, ésta aparece tras el nombre de cada gema en el listado.
 
             ...
-                Generating... C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/posix-spawn-0.3.8/lib/posix/spawn.rb:162: warning: cannot close fd before spawn
-                              done.
-              Server address: http://0.0.0.0:9001
-            Server running... press ctrl-c to stop.
+            pygments.rb (0.5.?)
             ...
-2. Si es necesario (ver arriba), desinstala cualquier versión rota de Pygments. Confirma que quieres eliminar la dependencia de Jekyll (temporalmente).
+
+  Si su instalación se corresponde con las versiones `0.5.0` o `0.5.4`, puede continuar.
+
+ **Nota:** Al usar la versión `0.5.4`, podría recibir _warnings_ cuando ejecute _Jekyll_, pero la generación del sitio web _Jekyll_ debería ser correcto.
+
+
+                ...
+                Generating... C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/posix-spawn-0.3.8/lib/posix/spawn.rb:162: 
+                       warning: cannot close fd before spawn done.
+                Server address: http://0.0.0.0:9001
+                Server running... press ctrl-c to stop.
+                ...
+
+2. Si fuese necesario (ver punto anterior), desinstale cualquier versión incompatible de _Pygments_. Para eliminar la dependencia incompatible con _Jekyll_, ejecute:
 
         gem uninstall pygments.rb --version "=0.5.2"
         ...
         Continue with Uninstall [yN] y
 
-3. Instala una versión funcionar de Pygments.
+3. Instale una versión compatible de _Pygments_.
+
         gem install pygments.rb --version "=0.5.0"
 
 ## Ejecutar Jekyll ##
 
-Dependiendo de su sitio, podrían surgir problemas debido a la incompatiblidad de codificación de caracteres. Para evitarlos, cambia la codificación de tu línea de comandos a UTF-8 antes de navegar a la carpeta fuente de tu sitio y ejecutar el comando Jekyll de tu elección.
+En función del sitio que quiera generar, es posible que surjan problemas por incompatibilidad con la codificación de caracteres. Para evitar estos problemas, cambie la codificación de su línea de comandos a `UTF-8` antes de navegar a la carpeta con el código fuente de su sitio y ejecute el comando _Jekyll_ correspondiente.
 
     chcp 64001
     cd "C:\my-site"
     jekyll serve
 
-Necesitas hacer esto cada vez que abras una nueva ventana de comandos, antes de ejecutar Jekyll.
+Es necesario realizar esta acción cada vez que abra una ventana de comandos y antes de ejecutar cualquier opción de _Jekyll_.
 
-Alternativamente, si es una opción, puedes agregar la siguiente configuración a tu archivo '_config.yml':
+No obstante, existe la alternativa - si fuese opción en su caso - de agregar la siguiente configuración a su archivo `_config.yml`:
 
     encoding: UTF-8
 
-**Note:** Esto solo cambia la codificación para un sitio. Necesitarás usar continuamente el comando 'chcp 64001' para otros sitios ( a menos de que también agregues esta configuración).
+**Nota:** Esta configuración sólo cambia la codificación para el sitio web concreto al que pertenece el fichero. Necesitará usar el comando `chcp 64001` en otros sitios web (a menos que también agregue esta configuración en cada uno de ellos).
 
-## Dejemos que Jekyll Observe ##
+## Dejemos que Jekyll observe... ##
 
-Si quieres usar la característica de auto-regeneración de Jekyll ('jekyll serve --watch' / 'jekyll serve -w'), necesitas tener instalada la gema *wdm*.
+Si quiere usar la característica de auto-regeneración de _Jekyll_ (`jekyll serve --watch` / `jekyll serve -w`), necesita tener también instalada la gema **wdm** de _Ruby_.
 
-Puedes:
+Para ello, existen dos opciones:
 
-* Verificar el sistema operativo e instalar la gema solo si es necesaria (en Windows), si tu sitio tiene un archivo Gemfile. Agrega esto al Gemfile:
+1. Añadiendo el siguiente fragmento de configuración al fichero `Gemfile` de si sitio web:
 
         require 'rbconfig'
         gem 'wdm', '~> 0.1.0' if RbConfig::CONFIG['target_os'] =~ /mswin|mingw/i
 
-* Instala la gema manualmente, si tu sitio no tiene un arhivo Gemfile. Ejecuta este comando:
+2. Instale la gema manualmente, si su sitio no tiene un arhivo `Gemfile`. Para ello, ejecute este comando:
 
         gem install wdm
