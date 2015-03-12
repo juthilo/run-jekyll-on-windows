@@ -20,6 +20,12 @@ The latest version of Jekyll at the time of writing is v2.4.0, which is compatib
 
 Check back here when a new version of Jekyll is released to find out if it remains compatible with Windows.
 
+### Proxy configuration
+
+When you try to install Jekyll (or any other gem) and your computer is behind a proxy, you need to define first an environment variable called `HTTP_PROXY` that tells Ruby how to bypass this proxy server when you call `gem install` commands.
+
+    HTTP_PROXY = _<proxy_name>_
+
 ## Summary
 
 Tada! You have successfully installed Jekyll. In fact, you can already build and serve sites without errors, unless there are blocks of code in there and you want to use syntax highlighting. To find out how to properly set up one of two syntax highlighters, click on the button below.
