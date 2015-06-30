@@ -9,7 +9,7 @@ Ruby is the programming language that Jekyll is written in. You'll need to insta
 
 ## Install Ruby
 
-First, click on the button below and download the installer for Ruby v2.0.0 that matches your system's architecture (x86 / x64).
+First, click on the button below and download the installer for Ruby v2.1.x that matches your system's architecture (x86 / x64).
 
 <a href="http://rubyinstaller.org/downloads/" class="button-external" target="_blank">Get Ruby for Windows</a>
 
