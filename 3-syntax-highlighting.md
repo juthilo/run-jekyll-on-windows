@@ -50,9 +50,24 @@ When you get to the screen below, make sure to click on the box next to *Add pyt
 
 <img alt="Screenshot from the Python installation" src="../public/img/python-path.png" class="img-nice">
 
-### Install pip
+### Install Python base of Pygments with pip
 
 Pip is a tool for installing and managing Python packages, similar to Ruby Gems. You'll need it to install Pygments, the Python package that pygments.rb uses to highlight your code.
+
+*pip.exe* should have been installed with Python (if you did use the Windows installer) in *C:/Python27/Script* and the folder added to *Path*. If it was not, see below how to install it manually.
+From the command line, run the following command to install the Python base of Pygments.
+
+~~~
+pip install Pygments
+~~~
+
+If you get something like *LookupError: unknown encoding: cp65001* run the following command first.
+
+~~~
+set PYTHONIOENCODING=utf-8
+~~~
+
+#### Install pip manually and Python base of Pygments
 
 First, click on the button below and download `get-pip.py` via the link on that site.
 
@@ -70,7 +85,7 @@ Then, run the following command to automagically download and install all requir
 python get-pip.py
 ~~~
 
-### Install Python base of Pygments
+Finally, install Python base of Pygments
 
 From the command line, run the following command to install the Python base of Pygments.
 
