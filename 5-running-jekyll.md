@@ -12,7 +12,7 @@ If there are `BOM` header characters in your UTF-8-encoded files, Jekyll will br
 encoding: bom|utf-8
 ~~~
 
-Despite an [BOM issue](https://github.com/jekyll/jekyll/issues/2853) being [fixed](https://github.com/jekyll/jekyll/pull/4404) starting in Jekyll v3.1.1, there still may be [issues with the BOM in certain cases](https://github.com/jekyll/jekyll/issues/5363) so removing the BOM from files may be a more complete solution.
+Despite a [BOM issue](https://github.com/jekyll/jekyll/issues/2853) being [fixed](https://github.com/jekyll/jekyll/pull/4404) starting in Jekyll v3.1.1, there still may be [issues with the BOM in certain cases](https://github.com/jekyll/jekyll/issues/5363) so removing the BOM from files may be a more complete solution.
 
 ## Set your encoding to UTF-8
 
