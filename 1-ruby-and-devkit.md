@@ -41,6 +41,14 @@ Auto-detect Ruby installations and add them to a configuration file for the next
 ruby dk.rb init
 ~~~
 
+Now ensure the init command completed successfully.
+
+~~~
+ruby dk.rb review
+~~~
+
+The output should display the path your Ruby install (e.g. ``` - C:/Ruby23-x64```). On 64-bit Windows, you may receive the error message "Invalid configuration. Please fix 'config.yml'" when running the review command. This is due to a bug in the DevKit. Implement the fix listed in this [stack overflow answer](http://stackoverflow.com/a/17148987) and then run the init and review commands again. Alternatively, open `C:\RubyDevKit\config.yml`, enter the path of your Ruby install (preceded by a dash character) on its own line (e.g. ``` - C:/Ruby23-x64```), save the file, and then run the review command again to confirm the text was entered correctly.
+
 Install the DevKit, binding it to your Ruby installation.
 
 ~~~
