@@ -23,7 +23,7 @@ Click Install and Ruby will be installed within seconds.
 
 Jekyll has some dependencies which, out of the box, only provide raw source code. To make them into fully functional executables, you'll probably need to install the Development Kit.
 
-Click the button below and download the DevKit archive that corresponds to your Ruby installation and system architecture. For Ruby v2.0.0, the file name will begin with `DevKit-mingw64`. Choose the 32bits or 64bits version depending on your system.
+Click the button below and download the DevKit archive that corresponds to your Ruby installation and system architecture. For Ruby v2.3.1, the file name will begin with `DevKit-mingw64`. Choose the 32bits or 64bits version depending on your system.
 
 <a href="http://rubyinstaller.org/downloads/" class="button-external" target="_blank">Get the Ruby DevKit</a>
 
