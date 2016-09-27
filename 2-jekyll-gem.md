@@ -12,6 +12,8 @@ Jekyll itself comes in the form of a Ruby Gem, which is an easy-to-install softw
 gem install jekyll
 ~~~
 
+If behind a proxy, then specify the proxy on the command line using the *-p* or *--http-proxy* option or by setting the *HTTP_PROXY* environment variable. See this [stackoverflow question](http://stackoverflow.com/questions/4418/how-do-i-update-ruby-gems-from-behind-a-proxy-isa-ntlm) for more information.
+
 Hit enter, watch, enjoy. This might take a while due to the number of dependencies.
 
 ## Compatibility
