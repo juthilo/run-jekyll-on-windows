@@ -24,7 +24,15 @@ gem 'wdm', '~> 0.1.0' if Gem.win_platform?
 
 ## Install working version of listen Gem
 
-Jekyll uses the listen Gem as a dependency for auto-regeneration. Some versions of listen do not work on Windows. [jekyll/jekyll-help#64](https://github.com/jekyll/jekyll-help/issues/64) has some information on versions that worked on Windows in the past. Please refer to the [Versions table](/#versions) to learn which versions of listen have been tested as part of this guide.
+Jekyll uses the listen Gem for auto-regeneration. The listen Gem is a dependency of Jekyll. Find the version of the listen Gem installed by the Jekyll Gem.
+
+     gem list | findstr listen
+
+Some versions of listen do not work on Windows. [jekyll/jekyll-help#64](https://github.com/jekyll/jekyll-help/issues/64) has some information on versions that worked on Windows in the past. Please refer to the [Versions table](/#versions) to learn which versions of listen have been tested as part of this guide. To install a specific version of the listen Gem, run this command and specify one of the tested versions.
+
+    gem install listen -v 3.1.5
+
+Using listen version 2.7.8 or later should work.
 
 ## May still not work
 

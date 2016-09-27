@@ -4,9 +4,15 @@ title: Run Jekyll without errors
 step: 5
 ---
 
-## No BOM allowed
+## BOM issues
 
-If there are `BOM` header characters in your UTF-8-encoded files, Jekyll will break. Make sure there are none.
+If there are `BOM` header characters in your UTF-8-encoded files, Jekyll will break when using older versions of Jekyll. Starting with Jekyll [v3.1.1](https://github.com/jekyll/jekyll/releases/tag/v3.1.1), BOM is supported when specifying the encoding in your `_config.yml`:
+
+~~~
+encoding: bom|utf-8
+~~~
+
+Despite a [BOM issue](https://github.com/jekyll/jekyll/issues/2853) being [fixed](https://github.com/jekyll/jekyll/pull/4404) starting in Jekyll v3.1.1, there still may be [issues with the BOM in certain cases](https://github.com/jekyll/jekyll/issues/5363) so removing the BOM from files may be a more complete solution.
 
 ## Set your encoding to UTF-8
 
