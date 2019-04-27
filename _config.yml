@@ -1,18 +1,18 @@
 # Dependencies
 markdown:         kramdown
-highlighter:      pygments
+highlighter:      rouge
 
 # Permalinks
 permalink:        pretty
 
 # Setup
-title:            'Run Jekyll on Windows'
-url:              http://jekyll-windows.juthilo.com
-baseurl:          /
+title:            '在Windows上运行Jekyll'
+url:              https://blog.kafuziroh.cc/run-jekyll-on-windows
+baseurl:          /run-jekyll-on-windows
 
 github:
-  repo:           https://github.com/juthilo/run-jekyll-on-windows
+  repo:           https://github.com/Kafuziroh/run-jekyll-on-windows/tree/gh-pages_zh-CN
 
 author:
-  name:           'Julian Thilo'
-  url:            https://twitter.com/juthilo
+  name:           '雨空CA@かふう(Kafuziroh)'
+  url:            https://twitter.com/Kafuziroh

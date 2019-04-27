@@ -1,57 +1,37 @@
 ---
 layout: page
-title: Install Ruby and the Ruby DevKit
+title: 安装 Ruby 和 Ruby DevKit
 nav_title: Ruby
 step: 1
 ---
 
-Ruby is the programming language that Jekyll is written in. You'll need to install Ruby and the corresponding DevKit, which is needed to build some of Jekyll's dependencies as "native extensions".
+Ruby 是 Jekyll 所用的编程语言。您将需要安装 Ruby 和相应的 Devkit，这是将 Jekyll 的一些依赖项构建为 "native extensions" 所必需的。Jekyll 有一些依赖项只提供原始源代码。为了使它们成为功能完整的可执行文件，您可能需要安装相应的 Devkit。
 
-## Install Ruby
+## 安装 Ruby 和 相应的 Devkit
 
-First, click on the button below and download the installer for Ruby v2.0.0 that matches your system's architecture (x86 / x64).
+首先，单击下面的按钮，下载与您的系统体系结构 (x86 / x64) 匹配的 Ruby 2.5.5 版安装程序。此安装程序来源于 RubyInstaller 并已整合相应的 Devkit。
 
-<a href="http://rubyinstaller.org/downloads/" class="button-external" target="_blank">Get Ruby for Windows</a>
+<a href="https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-2.5.5-1/rubyinstaller-devkit-2.5.5-1-x64.exe" class="button-external" target="_blank">Ruby+Devkit 2.5.5-1 (x64)</a>
 
-Execute the installer and go through the steps of the installation. When you get to the screen below, make sure to check the "Add Ruby executables to your PATH" box.
+<a href="https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-2.5.5-1/rubyinstaller-devkit-2.5.5-1-x86.exe" class="button-external" target="_blank">Ruby+Devkit 2.5.5-1 (x86)</a>
 
-<img alt="Screenshot of the Ruby installation's final step" src="../public/img/ruby-path.png" class="img-nice">
+执行安装程序并完成安装步骤。当您进入下面的页面时，请确保选中 "Add Ruby executables to your PATH" 复选框以及 "MSYS2 development toolchain" 复选框。
 
-Click Install and Ruby will be installed within seconds.
+<img alt="Screenshot of the Ruby installation" src="../public/img/ruby-path.png" class="img-nice">
 
-## Install the Ruby DevKit
+单击 Install，Ruby 将很快安装完毕。在安装完成页面，请不要直接退出安装程序。
 
-Jekyll has some dependencies which, out of the box, only provide raw source code. To make them into fully functional executables, you'll probably need to install the Development Kit.
+<img alt="Screenshot of the MSYS2 installation" src="../public/img/ruby-msys2.png" class="img-nice">
 
-Click the button below and download the DevKit archive that corresponds to your Ruby installation and system architecture. For Ruby v2.0.0, the file name will begin with `DevKit-mingw64`. Choose the 32bits or 64bits version depending on your system.
+请确保选中 "Run 'ridk install' to setup MSYS2" 复选框，并点击 Finish 完成安装。完成后将会弹出 RubyInstall2 的 CMD 窗口并提示输入数字选择安装组件，不输入数字并直接回车安装所有组件。
 
-<a href="http://rubyinstaller.org/downloads/" class="button-external" target="_blank">Get the Ruby DevKit</a>
+等待 RubyInstall2 完成安装，此步骤所需时间可能较长，请耐心等待全部配置完成
 
-The download is a self-extracting archive. When you execute the file, it'll ask you for a destination for the files. Enter a path that has no spaces in it. We recommend something simple, like `C:\RubyDevKit\`. Click Extract and wait until the process is finished.
+## 完成
 
-Next, you need to initialize the DevKit and bind it to your Ruby installation. Open your favorite command line tool and navigate to the folder you extracted the DevKit into.
-
-~~~
-cd C:\RubyDevKit
-~~~
-
-Auto-detect Ruby installations and add them to a configuration file for the next step.
-
-~~~
-ruby dk.rb init
-~~~
-
-Install the DevKit, binding it to your Ruby installation.
-
-~~~
-ruby dk.rb install
-~~~
-
-## Summary
-
-That's it! If all went well, you now have a working Ruby installation on your machine and you can build fully functional executables using the Ruby Development Kit. Ruby includes a way to install so-called *gems*&mdash;software packages that you can use from the command line. Jekyll is one of them! Click the button below to find out how you can successfully install it.
+完工！如果一切顺利的话，现在您的机器上已经安装了一个可以运行的 Ruby，您可以使用 Ruby Devkit 来构建功能完整的可执行文件。Ruby 提供了一种安装所谓的 *gems*&mdash;软件包 的方法，您可以从命令行使用这些软件包。Jekyll 就是其中之一。单击下面的按钮以了解如何安装它。
 
 <div class="pagination">
-  <a class="pagination-item older" href="{{ site.baseurl }}">&laquo; Introduction</a>
-  <a class="pagination-item newer" href="{{ site.baseurl }}2-jekyll-gem">Install Jekyll Gem &raquo;</a>
+  <a class="pagination-item older" href="{{ site.baseurl }}">&laquo; 介绍</a>
+  <a class="pagination-item newer" href="{{ site.baseurl }}2-jekyll-gem">安装 Jekyll Gem &raquo;</a>
 </div>
